@@ -1,0 +1,17 @@
+/* Hide scrollbars, but still allow scrolling */
+*,
+*::before,
+*::after {
+  scrollbar-width: none; /* Firefox-specific property */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Webkit-based browsers (Chrome, Safari, etc.) */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  font-family: "Manrope", sans-serif;
+}
