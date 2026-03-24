@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.system-monitor-tray" path="/org/gnome/shell/extensions/system-monitor-tray/">
+    
+    <key name="position" type="s">
+      <default>"right"</default>
+      <summary>Panel position</summary>
+      <description>Position of the indicator in the panel: left, center, or right</description>
+      <choices>
+        <choice value="left"/>
+        <choice value="center"/>
+        <choice value="right"/>
+      </choices>
+    </key>
+    
+    <key name="show-icons" type="b">
+      <default>false</default>
+      <summary>Show icons</summary>
+      <description>Show icons instead of text labels</description>
+    </key>
+    
+    <key name="bold-labels" type="b">
+      <default>false</default>
+      <summary>Bold labels</summary>
+      <description>Display labels in bold text</description>
+    </key>
+    
+    <key name="bold-percentages" type="b">
+      <default>false</default>
+      <summary>Bold percentages</summary>
+      <description>Display percentage values in bold</description>
+    </key>
+    
+    <key name="round-values" type="b">
+      <default>false</default>
+      <summary>Round values</summary>
+      <description>Round percentage values to whole numbers (e.g., 13% instead of 12.5%)</description>
+    </key>
+    
+    <key name="show-cpu" type="b">
+      <default>true</default>
+      <summary>Show CPU</summary>
+      <description>Show CPU usage indicator</description>
+    </key>
+    
+    <key name="show-memory" type="b">
+      <default>true</default>
+      <summary>Show Memory</summary>
+      <description>Show memory usage indicator</description>
+    </key>
+    
+    <key name="show-swap" type="b">
+      <default>true</default>
+      <summary>Show Swap</summary>
+      <description>Show swap usage indicator</description>
+    </key>
+    
+    <key name="show-load" type="b">
+      <default>true</default>
+      <summary>Show Load</summary>
+      <description>Show system load indicator</description>
+    </key>
+    
+    <key name="show-gpu" type="b">
+      <default>true</default>
+      <summary>Show GPU</summary>
+      <description>Show GPU usage indicator</description>
+    </key>
+    
+  </schema>
+</schemalist>

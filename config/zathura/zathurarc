@@ -1,0 +1,29 @@
+# Adjust zoom for better control
+set zoom-min 50
+set zoom-max 150
+
+# Explicitly set the font size with the regular style if necessary
+set font "Berkeley Mono Regular" 11
+
+# Modify background/foreground colors
+set default-bg "#000000"
+set default-fg "#ffffff"
+
+# Set recolor settings for dark mode
+set recolor true
+set recolor-lightcolor "#000000"
+set recolor-darkcolor "#ffffff"
+set recolor-reverse-video true
+set recolor-keephue false
+
+# Make sure all notifications and colors look right
+set notification-error-bg "#AC4142"
+set notification-error-fg "#000000"
+set notification-warning-bg "#AC4142"
+set notification-warning-fg "#000000"
+set highlight-color "#F4BF75"
+set highlight-active-color "#6A9FB5"
+
+# Optional: tweak scrolling behavior if needed
+set scroll-step 100
+set scroll-full-overlap 0.1  # Adjust this if the overlap feels off

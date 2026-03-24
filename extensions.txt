@@ -1,0 +1,8 @@
+blur-my-shell@aunetx
+dash-to-dock@micxgx.gmail.com
+hidetopbar@mathieu.bidon.ca
+lockscreen-extension@pratap.fastmail.fm
+notification-configurator@exposedcat
+rounded-window-corners@fxgn
+system-monitor-tray@lsb.codes
+user-theme@gnome-shell-extensions.gcampax.github.com

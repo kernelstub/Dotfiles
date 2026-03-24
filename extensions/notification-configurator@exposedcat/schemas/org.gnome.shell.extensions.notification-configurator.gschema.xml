@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.notification-configurator" path="/org/gnome/shell/extensions/notification-configurator/">
+
+    <!-- Notification threshold in milliseconds -->
+    <key name="notification-threshold" type="i">
+      <default>5000</default>
+      <summary>Notification threshold</summary>
+      <description>Time in ms (1s = 1,000ms) before allowing duplicate notifications from the same source</description>
+      <range min="100" max="60000"/>
+    </key>
+
+    <!-- App themes mapping stored as JSON string -->
+    <key name="app-themes" type="s">
+      <default>'{}'</default>
+      <summary>Application color mappings</summary>
+      <description>JSON object mapping application names to their notification colors</description>
+    </key>
+
+    <!-- Enable/disable features -->
+    <key name="enable-rate-limiting" type="b">
+      <default>true</default>
+      <summary>Enable notification rate limiting</summary>
+      <description>Whether to enable rate limiting for duplicate notifications</description>
+    </key>
+
+    <key name="enable-custom-colors" type="b">
+      <default>true</default>
+      <summary>Enable custom notification colors</summary>
+      <description>Whether to apply custom colors to notifications based on application</description>
+    </key>
+
+    <key name="enable-filtering" type="b">
+      <default>true</default>
+      <summary>Enable notification filtering</summary>
+      <description>Whether to enable notification filtering based on block list</description>
+    </key>
+
+    <key name="enable-fullscreen" type="b">
+      <default>false</default>
+      <summary>Enable notifications in fullscreen</summary>
+      <description>Whether to show notifications when applications are in fullscreen mode</description>
+    </key>
+
+    <key name="notification-position" type="s">
+      <default>'center'</default>
+      <summary>Notification position</summary>
+      <description>Position of notifications on screen: fill, left, right, or center</description>
+    </key>
+
+    <!-- Notification block list stored as JSON string -->
+    <key name="block-list" type="s">
+      <default>'[]'</default>
+      <summary>Notification block list</summary>
+      <description>JSON array of notification filter objects with title, body, appName, and action fields</description>
+    </key>
+
+    <!-- Notification timeout settings -->
+    <key name="notification-timeout" type="i">
+      <default>4000</default>
+      <summary>Notification timeout</summary>
+      <description>Time in milliseconds before notifications auto-dismiss (0 = never dismiss)</description>
+      <range min="0" max="30000"/>
+    </key>
+
+    <key name="ignore-idle" type="b">
+      <default>true</default>
+      <summary>Ignore idle state</summary>
+      <description>Whether to ignore user idle state when timing notifications</description>
+    </key>
+
+    <key name="always-normal-urgency" type="b">
+      <default>false</default>
+      <summary>Force normal urgency</summary>
+      <description>Whether to force all notifications to normal urgency level</description>
+    </key>
+
+  </schema>
+</schemalist>
