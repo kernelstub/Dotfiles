@@ -1,0 +1,1563 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+
+@import url("https://raw.githubusercontent.com/G0d0fninjas/visual-refresh-compact-title-bar/refs/heads/main/desktop.css");
+
+/* if using browser version, change "desktop" to "browser" */
+/* if using ptb/canary build, change "main" to "experimental" */
+
+
+@import url(https://raw.githubusercontent.com/amozeo/discord-css-snippets/refs/heads/main/snippets/compact-search-button.css);
+@import url(https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css);
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
+@import url("https://minidiscordthemes.github.io/Snippets/ForumImprovements/main.css");
+@import url(https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css);
+
+
+/* @import url("https://raw.githubusercontent.com/DubyaDude/DubyasCleanupOfDiscord/main/DubyasCleanupOfDiscord.css"); */
+
+/* page swapper reset */
+
+@import url(https://davart154.github.io/Themes/Snippets/Mana%20Page%20Switcher/ManaPageSwitcherSource.css);
+
+/* compact buttons */
+@import url('https://raw.githubusercontent.com/Krammeth/css-snippets/refs/heads/main/CompactButtons.css');
+
+
+
+/* fancy spotify */
+
+
+/* name bubles */
+@import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+/* All colors are in RGB format (red, green, blue) use: https://www.google.com/search?q=colorpicker */
+* {
+  font-size: 14px !important;
+}
+
+.c9d15c8a962de3c8-icon path {
+    fill: #555; /* new color, e.g., red */
+}
+
+
+._91a9d7f7e5248a56-subText {
+  display: none;
+}
+
+:root {
+
+  --app-border-frame: none !important;
+
+  /* Gotta copy paste them for some reason. It's fine. */
+  --vspr-bg-base: 0, 0, 0; /* #101010 */
+  --vspr-bg-subtle: 28, 28, 28; /* #1c1c1c */
+  --vspr-fg-base: 255, 255, 255; /* #ffffff */
+  --vspr-fg-subtle: 160, 160, 160; /* #a0a0a0 */
+  --vspr-accent: 37, 37, 37; /* #ffc799 */
+  --vspr-fg-err: 37, 37, 37; /* #ff8080 */
+  --vspr-fg-suc: 37, 37, 37; /* #99ffe4 */
+
+  /* END VESPER COLORS */
+
+  --settingsicons: 0; /*	Use Settings Icons in User Settings: 1 = yes, 0 = no */
+  /* --font: "Geist", "gg sans", "Noto Sans"; */
+  --font: "Manrope"; /*	General Font */
+
+  --accentcolor: 85, 85, 85; /*	Blurple			-	default:	88,101,242		-	hex:	#5865f2 */
+  --accentcolor2: 85, 85, 85; /*	Boostpink		-	default:	255,115,250		-	hex:	#ff73fa */
+  --linkcolor: 75, 75, 75; /*	Link Color		-	default:	0,176,244		-	hex:	#00b0f4 */
+  --mentioncolor: 85, 85, 85; /*	Highlight Color		-	default:	250,166,26		-	hex:	#faa61a */
+  --successcolor: 37, 37, 37; /*	Success Color		-	default:	59,165,92		-	hex:	#3ba55c */
+  --warningcolor: 37, 37, 37; /*	Warning Color		-	default:	250,166,26		-	hex:	#faa61a */
+  --dangercolor: 255, 83, 83; /*	Danger Color		-	default:	237,66,69		-	hex:	#ed4245 */
+
+  --textbrightest: 255, 255, 255; /*	Text Color 1		-	default:	255,255,255		-	hex:	#ffffff */
+  --textbrighter: 190, 190, 190; /*	Text Color 2		-	default:	220,221,222		-	hex:	#dcddde */
+  --textbright: 180, 180, 180; /*	Text Color 3		-	default:	185,187,190		-	hex:	#b9bbbe */
+  --textdark: 180, 180, 180; /*	Text Color 4		-	default:	142,146,151		-	hex:	#8e9297 */
+  --textdarker: 140, 140, 140; /*	Text Color 5		-	default:	114,118,125		-	hex:	#72767d */
+  --textdarkest: 126, 126, 126; /*	Text Color 6		-	default:	79,84,92		-	hex:	#4f545c */
+
+  --backgroundaccent: 40, 40, 40; /*	Background Accent	-	default:	64,68,75		-	hex:	#40444b */
+  --backgroundprimary: 0, 0, 0; /*	Background 1		-	default:	54,57,63		-	hex:	#36393f */
+  --backgroundsecondary: 0, 0, 0; /*	Background 2		-	default:	47,49,54		-	hex:	#2f3136 */
+  --backgroundsecondaryalt: 0, 0, 0; /*	Background 3		-	default:	41,43,47		-	hex:	#292b2f */
+  --backgroundtertiary: 0, 0, 0; /*	Background 4		-	default:	32,34,37		-	hex:	#202225 */
+  --backgroundfloating: 28, 28, 28; /*	Background Elevated	-	default:	24,25,28		-	hex:	#18191c */
+  --text-feedback-positive: #ccc !important;
+  --font-code: "Manrope" !important;
+}
+
+/* My stuff */
+/* Make text-area in chats transparent */
+.themedBackground__6b1b6 {
+  background: transparent;
+}
+
+/* Reduce space between text area and bottom of the screen */
+.channelTextArea__2e60f {
+  margin-bottom: 12px;
+}
+
+/* Reduce space between last message and text area */
+.scrollerSpacer__9cd32 {
+  height: 16px;
+}
+
+/* Align attach button to the left */
+.sansAttachButton__996a4 {
+  padding-left: 0;
+}
+
+/* Make input in cmdk transparent */
+.input__848cd {
+  background: transparent;
+}
+
+/* Remove padding around cmdk so selected item spans to the edge */
+.quickswitcher_a3d29a {
+  padding: 0;
+}
+
+/* Prevent scroller from extending out of parent */
+.scroller__52ae7 {
+  margin-right: 0;
+}
+
+/* Add padding so protip in dmk doesn't touch the edge */
+.protip__84833 {
+  padding-inline: 10px;
+}
+
+/* Vesper color for code snippets in chat */
+.hljs-selector-class,.hljs-number, .hljs-meta,.hljs-title,.hljs-literal,.hljs-built_in,.hljs-name,.hljs-section {
+    color: #ffc799 !important;
+}
+
+.hljs-attribute,.hljs-title.class_,.hljs,.hljs-attr,.hljs-variable {
+  color: #ffffff !important;
+}
+
+.hljs-selector-pseudo,.hljs-keyword,.hljs-type {
+  color: #a0a0a0 !important;
+}
+
+.hljs-string {
+  color: #99ffe4 !important;
+}
+.searchBar_f0963d  {
+  display: none;
+}
+
+.hljs  {
+  background-color: var(--bg-3) !important;
+}
+
+.visual-refresh ._4d95d73152192cf9-textContainer {
+  background-color: var(--bg-3) !important;
+}
+
+
+/* Example usage */
+code {
+    font-family: 'Manrope', monospace;
+}
+
+
+.visual-refresh .expandedFolderIconWrapper_bc7085 {
+    border-radius: 12px;
+    width: var(--guildbar-avatar-size);
+    height: var(--guildbar-avatar-size);
+    margin: var(--space-4);
+    margin-top: 15px;
+}
+
+
+
+
+.ab86098b36386ff7-container, .ab86098b36386ff7-editable, .custom-client-theme .searchBar_e6b769 {
+  display: none;
+}
+
+
+:where(.c0bea05627c5dc35-overlay) {
+  background-color: transparent !important;
+}
+
+.c0bea05627c5dc35-overlay {
+  background-color: transparent !important;
+}
+
+
+
+._752971923a1e6683-markup code, ._4d95d73152192cf9-footer, ._4d95d73152192cf9-textContainer, .d5f3cd116f175f35-wrapper {
+  border: 1px solid #151515 !important;
+}
+
+@import url("https://aushevahmad.github.io/awesome-css/modules/custom-bar-prompt.css");
+
+
+._0f2e83213c878a13-container, ._0f2e83213c878a13-openOnHover, ._095fe51feb41b3bb-headerContainer, .tadaIcon_c75f85
+ {
+  display: none !important;
+}
+
+
+.progressBar_c75f85 {
+  background: #252525 !important;
+}
+
+._3e3b0b1c0f688f9e-flowerStar > path {
+  fill: #75757575;
+}
+
+._2ea32c412048f708-modeSelected ._2ea32c412048f708-link, ._2ea32c412048f708-modeSelected:hover ._2ea32c412048f708-link {
+  background-color: #121212 !important;
+}
+
+
+
+:where(._68edb95846a37624-banner):before {
+  display: none;
+}
+
+
+.d1d9f3257b6b604c-tabBar {
+  border-bottom: none;
+}
+
+
+._99e7cad8d4c55236-privateChannelsHeaderContainer {
+  display: none;
+}
+
+
+span._5d473ecff348c314-clanTag {
+  border: 1px solid #252525;
+  background-color: transparent;
+}
+
+
+
+
+textarea[aria-label="Note"] {
+  display: none !important;
+}
+
+/* OR: hide the whole section that contains the textarea */
+textarea[aria-label="Note"] {
+  display: none !important; /* Hides only the box */
+}
+
+textarea[aria-label="Note"] {
+  display: none !important;
+}
+
+section[aria-labelledby="uid_334"] {
+  display: none !important;
+}
+
+
+section[aria-labelledby="uid_458"] {
+  display: none !important;
+}
+
+section[aria-labelledby="uid_458"] {
+  display: none !important;
+}
+
+
+.c0bea05627c5dc35-inner, .container_e96122, ._623de82e76ad7f82-grid._623de82e76ad7f82-hasThumbnail  {
+  border: 1px solid #151515 !important;
+
+}
+
+._623de82e76ad7f82-grid._623de82e76ad7f82-hasThumbnail, ._623de82e76ad7f82-grid {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+ ._623de82e76ad7f82-embedFull {
+  border: 4px solid #151515 !important;
+ }
+
+._623de82e76ad7f82-grid {
+  border: 1px solid #151515;
+}
+
+
+.af017ab847f75d02-originalLink {
+  border-radius: inherit;
+  border: 1px solid #151515;
+}
+
+
+.c0bea05627c5dc35-inner, .container_e96122, ._623de82e76ad7f82-grid._623de82e76ad7f82-hasThumbnail  {
+  border: 1px solid #151515 !important;
+  border-radius: inherit !important;
+}
+
+
+.vc-shiki-root .vc-shiki-code {
+  background-color: #000000 !important;
+}
+
+
+
+.a629d4eb1dd44839-icon {
+    background-color: #202020 !important;
+    color: #cacaca;
+}
+
+
+._5dec784a68542d60-perksDemoContainer > svg > path{
+    fill: #cacaca !important;
+}
+
+._87e56746fb615893-text {
+    color: #cacaca;
+}
+
+/* 
+.text-sm\/medium_cf4812 {
+    display: none;
+} */
+
+
+._5dec784a68542d60-perksDemoContainer {
+    display: none;
+}
+
+
+
+
+._5dec784a68542d60-perksDemoContainer {
+    display: none;
+}
+
+._29444ba32c7fbeab-containerDefault {
+  > div {
+    padding-left: 0.5em;
+
+    > div {
+      display: flex !important;
+      place-content: start !important;
+      flex-direction: row-reverse !important;
+    }
+  }
+}
+
+form>div._49fc18ba07c5025f-focusLock>div._49fc18ba07c5025f-rootWithShadow {
+    width: var(--modal-width-medium);
+
+    ._49fc18ba07c5025f-header {
+        padding: var(--modal-vertical-padding) var(--modal-horizontal-padding);
+        margin-bottom: var(--modal-vertical-padding);
+        border-bottom: var(--border-normal) solid 1px;
+
+        .colorHeaderPrimary_d1aa77 {
+            text-align: center;
+            font-weight: var(--font-weight-semibold);
+            flex-grow: 1;
+        }
+
+        .closeButton_e6af31 {
+            top: unset;
+            right: var(--modal-horizontal-padding);
+            margin-bottom: auto;
+            margin-top: auto;
+
+            ._201d5e8a3c09670a-contents {
+                height: 24px;
+            }
+        }
+    }
+
+    .e858dd8956328358-submissionWarning {
+        display: none;
+    }
+
+    ._1b11bd49fe2d59c9-formItem .b717a15017b82443-eyebrow {
+        margin-bottom: 4px;
+
+        .b717a15017b82443-errorMessage {
+            color: var(--text-danger);
+        }
+    }
+
+    ._0ed4fc708cdbac0d-input._0ed4fc708cdbac0d-error:focus {
+        color: var(--text-normal);
+        transition-property: border-color, color;
+    }
+
+    ._49fc18ba07c5025f-footer {
+        justify-content: space-between;
+    }
+}
+
+.d6271c8ee3948714-tile {
+    width: 200px !important;
+
+    .d6271c8ee3948714-tileSizer {
+        aspect-ratio: 1 / 1;
+        width: 200px;
+
+        ._2f4f7eb58b61c328-tile,
+        .fb62e279d3f0a88a-background {
+            background: none !important;
+        }
+
+        ._2f4f7eb58b61c328-border {
+            width: 84px;
+            height: 84px;
+            align-self: center;
+            justify-self: center;
+            border-radius: 100%;
+        }
+
+        ._2f4f7eb58b61c328-overlayContainer {
+            z-index: 100;
+            width: 150px;
+            height: 150px;
+            align-self: center;
+            justify-self: center;
+            gap: 0;
+
+            ._2f4f7eb58b61c328-overlayBottom {
+                height: 130px;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+
+                ._2f4f7eb58b61c328-overlayTitle {
+                    opacity: 1;
+                    top: 0;
+                    justify-content: center;
+                    padding: 6px;
+                    margin: 0px !important;
+                    background: linear-gradient(to top, black 0%, transparent 100%) !important;
+                    border-radius: 0px;
+                }
+
+                .statusContainer_ba4b17 {
+                    width: 84px;
+                    align-items: end;
+                    align-content: end;
+                    justify-content: end;
+
+                    ._2f4f7eb58b61c328-status {
+                        backdrop-filter: blur(10px);
+                    }
+                }
+            }
+        }
+    }
+
+    ._2f4f7eb58b61c328-tileChild:has(._2f4f7eb58b61c328-videoWrapper) {
+        ._2f4f7eb58b61c328-overlayContainer {
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            z-index: auto;
+        }
+
+        ._2f4f7eb58b61c328-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--custom-base-tile-border-radius);
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+/* good */
+
+
+.d6271c8ee3948714-tile {
+    width: 200px !important;
+
+    .d6271c8ee3948714-tileSizer {
+        aspect-ratio: 1 / 1;
+        width: 200px;
+
+        ._2f4f7eb58b61c328-tile,
+        .fb62e279d3f0a88a-background {
+            background: none !important;
+        }
+
+        ._2f4f7eb58b61c328-border {
+            width: 84px;
+            height: 84px;
+            align-self: center;
+            justify-self: center;
+            border-radius: 100%;
+        }
+
+        ._2f4f7eb58b61c328-overlayContainer {
+            z-index: 100;
+            width: 150px;
+            height: 150px;
+            align-self: center;
+            justify-self: center;
+            gap: 0;
+
+            ._2f4f7eb58b61c328-overlayBottom {
+                height: 130px;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+
+                ._2f4f7eb58b61c328-overlayTitle {
+                    opacity: 1;
+                    top: 0;
+                    justify-content: center;
+                    padding: 6px;
+                    margin: 0px !important;
+                    background: linear-gradient(to top, black 0%, transparent 100%) !important;
+                    border-radius: 0px;
+                }
+
+                .statusContainer_ba4b17 {
+                    width: 84px;
+                    align-items: end;
+                    align-content: end;
+                    justify-content: end;
+
+                    ._2f4f7eb58b61c328-status {
+                        backdrop-filter: blur(10px);
+                    }
+                }
+            }
+        }
+    }
+
+    ._2f4f7eb58b61c328-tileChild:has(._2f4f7eb58b61c328-videoWrapper) {
+        ._2f4f7eb58b61c328-overlayContainer {
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            z-index: auto;
+        }
+
+        ._2f4f7eb58b61c328-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--custom-base-tile-border-radius);
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+.affa7e120767dd82-listItems {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.bfe55a0aaaf62375-controlSection {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+
+.layerContainer_cd0de5:has(.d3a6f0de39ff36e9-carouselModal) .tooltip_b6c360 {
+    display: none;
+}
+
+.d3a6f0de39ff36e9-carouselModal {
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    margin: auto;
+
+    ._6088c3df6d10c76d-topBar {
+        place-self: start;
+        order: 1;
+
+        .cc1819cb49c2d109-actionButtons {
+            padding: 0px !important;
+            margin: 0px !important;
+            background-color: transparent;
+            border: none;
+        }
+
+        ._6088c3df6d10c76d-authorAvatar,
+        ._6088c3df6d10c76d-author,
+        ._6088c3df6d10c76d-closeButton,
+        .actionButton_dda074:has(path[d="M15.62 17.03a9 9 0 1 1 1.41-1.41l4.68 4.67a1 1 0 0 1-1.42 1.42l-4.67-4.68ZM17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"]),
+        .actionButton_dda074:has(path[d="M21.7 7.3a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4L18.58 9H13a7 7 0 0 0-7 7v4a1 1 0 1 1-2 0v-4a9 9 0 0 1 9-9h5.59l-3.3-3.3a1 1 0 0 1 1.42-1.4l5 5Z"]),
+        .actionButton_dda074:has(path[d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"]) {
+            display: none !important;
+        }
+
+        .actionButton_dda074:has(path[d="M15 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V4.41l-4.3 4.3a1 1 0 1 1-1.4-1.42L19.58 3H16a1 1 0 0 1-1-1Z"]) {
+            width: auto;
+            height: 0;
+
+            &::after {
+                content: "Open in browser";
+                width: max-content;
+                display: flex;
+                height: auto;
+                pointer-events: all;
+
+                :hover {
+                    color: white;
+                }
+            }
+
+            &::after:hover {
+                color: white;
+            }
+
+            .actionButtonInner_dda074 {
+                display: none;
+
+            }
+        }
+    }
+
+    .b2eddf192f54b058-navPrev {
+        position: fixed;
+        left: -64px;
+        background-color: transparent;
+
+        .aec7abc73c126bc0-buttonInner {
+            border: none !important;
+        }
+    }
+
+    .b2eddf192f54b058-navNext {
+        position: fixed;
+        right: -64px;
+        background-color: transparent;
+
+        .aec7abc73c126bc0-buttonInner {
+            border: none !important;
+        }
+    }
+    .d75751de2a8ac456-galleryContainer {
+        display: none;
+    }
+}
+
+[class*="rtcConnectionStatusWrapper__"] {
+    [class*="rtcConnectionStatus__"] + a > div > div {
+        display: none !important;
+    }
+}
+
+._6e9f8dce4cc18de3-childWrapperNoHoverBg, ._6e9f8dce4cc18de3-wrapper._6e9f8dce4cc18de3-selected ._6e9f8dce4cc18de3-childWrapper, ._6e9f8dce4cc18de3-wrapper:hover ._6e9f8dce4cc18de3-childWrapper {
+    background-color: #121212 !important;
+}
+
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorPrimary {
+    background-color: #101010 !important;
+    color: #cacaca !important;
+}
+
+._201d5e8a3c09670a-lookFilled._201d5e8a3c09670a-colorPrimary:hover {
+    background-color: #202020 !important;
+    color: #cacaca !important;
+}
+
+.postEnrollmentBackground_e23249 {
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+._13533e3c5791980f-autocompleteRow:has(.ca5f52b68137f12b-icon[src="https://cdn.discordapp.com/avatars/1211781489931452447/2b5cd2dc89eb963155f55520a6fa0495.webp?size=32"]),
+.cb32c78a53f54371-iconCard:has(.cb32c78a53f54371-iconCard[src="https://cdn.discordapp.com/app-icons/1211781489931452447/8904fec86de9bb7a71b2ae1e71a1adbc.png?size=128"]),
+.cb32c78a53f54371-container[aria-label^="Wordle"] {
+  display: none;
+}
+
+.f1ceaca61b18918e-colorable.f1ceaca61b18918e-disconnect {
+    background-color: #101010 !important;
+}
+
+.f1ceaca61b18918e-colorable.f1ceaca61b18918e-disconnect, .f1ceaca61b18918e-colorable.f1ceaca61b18918e-disconnect .f1ceaca61b18918e-centerIcon {
+    color: #cacaca;
+}
+
+
+._2f4f7eb58b61c328-streamPreview {
+    background-color: #353535 !important;
+
+}
+
+
+
+@container root style(--colors: on) {
+    .visual-refresh {
+        .f1ceaca61b18918e-colorable.f1ceaca61b18918e-primaryDark, .f8896c4f6be18f59-reaction {
+            background-color: #151515 !important;
+        }
+    }
+}
+
+
+/* Custom stuff */
+
+@property --show-chatbar-icons {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
+}
+
+
+@container body style(--show-chatbar-icons: off) {
+  ._740174f3d6a2c8fe-buttons {
+    display: none !important;
+  }
+}
+
+
+
+/* option to hide screenshare popout */
+@property --screenshare-pop-up-window {
+  syntax: 'on | off';
+  inherits: false;
+  initial-value: on;
+}
+
+@container body style(--screenshare-pop-up-window: off) {
+  ._6341f5794d35fb69-pictureInPictureWindow {
+    display: none !important;
+  }
+}
+
+
+
+/* call background color of people profiles in call */
+@property --call-gray-color-background-icons {
+  syntax: 'on | off';
+  inherits: false;
+  initial-value: off;
+}
+
+@container body style(--call-gray-color-background-icons: on) {
+  .fb62e279d3f0a88a-background {
+    background-color: #151515 !important;
+    border-radius: inherit;
+  }
+}
+
+
+
+.contentAndCopyButtonWrapper__98ba8, ._98ba899df138d534-contentContainer, ._98ba899df138d534-contentWrapper {
+    background: #000000;
+    border: 1px solid #151515;
+}
+
+
+.section[aria-label="User area"], div[class*="sidebar_"] > section[aria-label] {
+  background-color: transparent !important;
+}
+
+
+.a21736575ea33af0-voiceCallWrapper {
+  background-color: #000000;
+}
+
+
+
+.theme-light:not(.custom-user-profile-theme), .theme-dark:not(.custom-user-profile-theme), .theme-amoled:not(.custom-user-profile-theme), .visual-refresh.theme-light:not(.custom-user-profile-theme), .visual-refresh.theme-dark:not(.custom-user-profile-theme), .visual-refresh.theme-amoled:not(.custom-user-profile-theme), .visual-refresh .theme-light:not(.custom-user-profile-theme), .visual-refresh .theme-dark:not(.custom-user-profile-theme), .visual-refresh .theme-amoled:not(.custom-user-profile-theme) {
+  --app-border-frame: none !important;
+}
+
+
+
+._623de82e76ad7f82-embedFull {
+  border: 1px solid #151515 !important;
+}
+
+.user-profile-popout .c0bea05627c5dc35-inner {
+border: none !important;
+}
+
+/* Hide ALL scrollbars in Discord */
+* {
+  scrollbar-width: none !important; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none !important; /* Chrome, Edge, etc. */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* --------------------------------------- */
+
+/* BLUR STUFF FOR PRIVACY */
+/* ._6e9f8dce4cc18de3-icon,
+.f34534e8a5d3ca64-icon {
+  filter: blur(4px);
+}
+
+.c19a557985eb7793-avatar, ._44b0c28be7879b7b-svg > foreignObject, .c19a557985eb7793-replyAvatar {
+  filter: blur(4px);
+  background-color: red;
+
+}
+
+.c19a557985eb7793-avatarDecoration, ._44b0c28be7879b7b-avatarDecoration {
+  filter: blur(4px);
+}
+
+[class^="username_"], ._20a53846fe2e8513-name, ._00943886e1cf89d1-header ._4bd5201c86a2042b-defaultColor, ._63ed30c16c7151f2-nickname, ._63ed30c16c7151f2-userTagUsername, ._63ed30c16c7151f2-guildTagContainer {
+  filter: blur(4px);
+}
+
+._9bfb9a25604068f0-accountNameText {
+  filter: blur(4px);
+}
+ */
+
+/* Hide elements where data-list-item-id contains "nitro" or "shop" */
+/* a[data-list-item-id*="nitro"],
+a[data-list-item-id*="shop"] {
+    display: none !important;
+} */
+
+/* Full sized gif picker */
+[class*='layerContainer_'] [class*='positionLayer__'] {
+    height: 100% !important;
+    [class*='drawerSizingWrapper__'] {
+        top: 3.5em !important;
+        height: calc(100% - 9em)
+    }
+}
+
+
+.BackgroundColorContainer_backgroundColorContainer__YZSQ7 {
+  background: #101010 !important;
+}
+
+.a22cb0c66246f5d3-fullWidth.a22cb0c66246f5d3-hasText {
+  background: #303030;
+  color: #fff;
+}
+
+
+._5126c0cd07f243a0-mentioned {
+  background-color: #101010 !important;
+}
+
+
+  /* remove gradient glow in chat and user list */
+.e5de7811b2777bfa-threeColorGradient,
+.e5de7811b2777bfa-twoColorGradient {
+  &.e5de7811b2777bfa-usernameGradient {
+    color: color-mix(in lab, var(--custom-gradient-color-1), var(--custom-gradient-color-2));
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+
+  &::after,
+  &._703b91fc872193e8-nameGlow {
+      display: none;
+  }
+}
+
+/* collapse guild tag */
+
+._10651c5cfe637db6-chipletContainerInner > ._10651c5cfe637db6-text > ._10651c5cfe637db6-tagText {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  will-change: max-width, margin;
+  transition: max-width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+._10651c5cfe637db6-chipletContainerInner:hover > ._10651c5cfe637db6-text > ._10651c5cfe637db6-tagText {
+  max-width: 20ch;
+  margin-right: .3ch;
+  transition-delay: 0.08s;
+}
+._10651c5cfe637db6-chipletContainerInner > ._10651c5cfe637db6-text > img._10651c5cfe637db6-badge {
+  margin-right: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              margin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+._10651c5cfe637db6-chipletContainerInner:hover > span > img._10651c5cfe637db6-badge {
+  transform: rotateZ(360deg);
+  margin-right: .6ch;
+  transition-delay: 0.08s;
+}
+._10651c5cfe637db6-chipletContainerInner {
+  position: relative;
+  display: inline-block;
+  background-color: var(--background-mod-subtle);
+  padding: 0 2px;
+  margin-left: 0;
+}
+._10651c5cfe637db6-chipletContainerInner:hover ~ ._10651c5cfe637db6-tagText {
+  display: block;
+  clear: both;
+  margin-top: .5ch;
+}
+
+
+/* round messages on hovering, replies, and mentions */
+:root {
+  --round-messages-radius: 8px;
+}
+[class*=cozyMessage] {
+    margin-left: 4px;
+    border-radius: var(--round-messages-radius);
+}
+[class*=cozyMessage]:before {
+  width: 4px;
+  height: calc(100% - 1.5*var(--round-messages-radius));
+  align-self: center;
+  border-radius: 2px;
+  margin-left: calc(0.5*var(--round-messages-radius));
+}
+
+
+._0d0f9ddd12a3ace3-contentContainer {
+  display: none !important;
+}
+
+._8061a5f9dbf6d829-container, .bf424dc3dc4c8775-headings {
+  display: none;
+}
+
+
+._4bbc6dc06e75ad52-container {
+  display: none;
+}
+
+
+/* ------------------------------ */
+
+/* IMPORTNAT */
+
+._5d473ecff348c314-ownerIcon {
+  color: #656565; /* your desired color */
+}
+
+/* Roles colours and chat colours */
+.c19a557985eb7793-username, ._703b91fc872193e8-name, ._703b91fc872193e8-nameGlow {
+  color: #ccc !important;
+}
+
+
+img, video, canvas {
+  filter: none !important;
+  mix-blend-mode: normal !important;  
+}
+
+
+
+/* STATUSES */
+rect[fill='#da3e44'], svg[fill='#da3e44'] {
+    fill: #353535 !important;
+}
+rect[fill='#45a366'], svg[fill='#45a366'] {
+    fill: #353535 !important;
+}
+rect[fill='#ffc04e'], svg[fill='#ffc04e'] {
+    fill: #353535 !important;
+}
+rect[fill='#84858d'], svg[fill='#84858d'] {
+    fill: #353535 !important;
+}
+rect[fill='#593695'], svg[fill='#593695'] {
+    fill: #ac7de6 important;
+}
+
+
+._2b1f52e43a8f1c02-textBadge {
+  background-color: #353535 !important;
+}
+
+._6e9f8dce4cc18de3-childWrapper svg {
+  /* display: none; */
+}
+
+._6e9f8dce4cc18de3-childWrapper {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50px;  /* same size as the original SVG */
+  height: 50px;
+}
+
+
+._9bfb9a25604068f0-platformIconContainer, ._10651c5cfe637db6-badge {
+  filter: grayscale(100%) !important;
+}
+
+code {
+  background-color: #000 !important;
+}
+
+
+._20a53846fe2e8513-subText, .e6b7699ce8339e1c-searchBar {
+  display: none !important;
+}
+
+
+.dfb989b3f435152a-showEffect.dfb989b3f435152a-container .dfb989b3f435152a-neonGlow:hover {
+  background: transparent !important;
+  color: #ccc;
+  filter: none !important;
+  opacity: 1 !important;
+  -webkit-text-stroke-color: transparent !important;
+  -webkit-text-stroke-width: 0px !important;
+}
+.dfb989b3f435152a-showEffect.dfb989b3f435152a-container .dfb989b3f435152a-neon {
+  background: transparent !important;
+  color: #ccc;
+  filter: none !important;
+  opacity: 1 !important;
+  -webkit-text-stroke-color: transparent !important;
+  -webkit-text-stroke-width: 0px !important;
+}
+
+
+
+.dfb989b3f435152a-showEffect.dfb989b3f435152a-container .dfb989b3f435152a-neonGlow  {
+  background: transparent !important;
+  color: #ccc;
+  filter: none !important;
+  opacity: 1 !important;
+  -webkit-text-stroke-color: transparent !important;
+  -webkit-text-stroke-width: 0px !important;
+}
+
+
+.c69b6db0641110f6-voiceChannelHighlightGlow, .c69b6db0641110f6-voiceChannelHighlightBorder {
+  background-color: #ccc !important;
+}
+
+.c69b6db0641110f6-iconLive svg {
+  color: #ccc!important;
+}
+
+
+._2ea32c412048f708-hoistingNotConnected ._2ea32c412048f708-name, .text-xs\/normal_cf4812{
+  color: #ccc !important;
+}
+
+
+
+
+/* ------------------------------------------------- */
+
+
+.user-profile-modal-v2 ._9c3bea41fd465666-profile {
+  anchor-name: --profile-anchor;
+  --tooltip-bg: color-mix(in oklab, var(--neutral-79) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+  --tooltip-border: color-mix(in oklab,hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%,hsl(var(--custom-theme-base-color-hsl,0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount,var(--custom-theme-base-color-amount,0%)));
+    /* Edit fill (for bg) and color (for border) to be the same as above. %23 is # */
+  --arrow-svg: url("data:image/svg+xml,%3Csvg fill='%23242429' color='%23323237' width='16' height='10' viewBox='0 0 16 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath  d='M10.3426 7.0715C9.14163 8.57272 6.85837 8.57272 5.65739 7.0715L0 -0.000244141L16 -0.000244141L10.3426 7.0715Z'%3E%3C/path%3E%3Cpath stroke='currentColor' d='M9.93457 6.84546C8.93433 8.06766 7.06567 8.06766 6.06543 6.84546L0.0546875 -0.500244L15.9453 -0.500244L9.93457 6.84546Z'%3E%3C/path%3E%3C/svg%3E");
+  
+  ._9c3bea41fd465666-profileButtons {
+    position: fixed;
+    top: calc(anchor(--profile-anchor start) + 12px);
+    right: calc(anchor(--profile-anchor end) + 12px);
+
+    button {
+      background: var(--redesign-button-overlay-alpha-background) !important;
+      border: 1px solid var(--opacity-white-8) !important;
+      border-radius: 50%;
+      &:hover, &:active {
+        background: var(--redesign-button-overlay-alpha-pressed-background) !important;
+      }
+    }
+    >button {
+      min-width: 32px !important;
+
+      >.a22cb0c66246f5d3-buttonChildrenWrapper {
+        overflow: visible;
+        padding: 0 !important;
+        >.a22cb0c66246f5d3-buttonChildren {
+          overflow: visible;
+          justify-content: center;
+        }
+      }
+      ._4bd5201c86a2042b-lineClamp1 {
+        align-items: center;
+        position: absolute;
+        top: -52px;
+        
+        background-color: var(--tooltip-bg);
+        border-radius: var(--radius-sm);
+        box-shadow: inset 0 0 0 1px var(--tooltip-border), var(--shadow-high);
+        color: var(--text-default);
+        padding: var(--space-8) var(--space-12);
+        pointer-events: none;
+        
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+
+        will-change: opacity, transform;
+        opacity: 0;
+        transform: scale(0.95);
+        transform-origin: 50% 100%;
+        transition: opacity 0.1s ease, transform 0.1s ease;
+        &::after {
+          content: var(--arrow-svg);
+          position: absolute;
+          bottom: -13px;
+        }
+      }
+      &:hover ._4bd5201c86a2042b-lineClamp1 {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+
+/* compact search field */
+.search_a46bef > .searchBar_a46bef {
+    width: 32px !important;
+}
+
+.search_a46bef > .searchBar_a46bef .DraftEditor-root {
+    padding-right: 3px !important
+}
+
+.search_a46bef.open_a46bef > .searchBar_a46bef {
+    width: 244px !important;
+}
+
+.search_a46bef > .searchBar_a46bef .icon_a46bef {
+    margin-right: 7px;
+}
+
+
+
+
+/*  fix about me */
+
+._6a919231d4bdfd4f-bioTextArea {
+  height: max-content;
+}
+
+
+/* cleaner message actions */
+
+[class^=buttonContainer] > [class^=buttons] {
+    > [class^=buttonsInner] {
+        border: unset;
+        padding: unset;
+        box-shadow: var(--shadow-low) !important;
+        background-color: var(--background-base-low);
+        border-radius: 4px;
+        > [class^=separator] { display: none; }
+        > span {
+            > [class^=hoverBarButton] {
+                padding: unset;
+                height: 32px;
+                width: 32px;
+                border-radius: unset;
+                &:hover > [class^=icon] { transform: unset; }
+            }
+            &:has(~ [class^=separator]) { display: none; }
+            &:first-of-type ,[class^=separator] + & {
+                > [class^=hoverBarButton] {
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+            }
+            &:nth-last-of-type(2) > [class^=hoverBarButton] {
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+    }
+}
+
+
+.emoji_e5de78, ._29444ba32c7fbeab-wrapperCommon ._29444ba32c7fbeab-mainContent ._29444ba32c7fbeab-name, .overflow_b0dfc2 {
+  filter: grayscale(100%) !important;
+}
+
+.guildTagContainer__63ed3, .newMemberBadge_f80704, .clanTag__972a0, .clickable__10651, .badge__8061a, span.clanTag__5d473{
+  display: none !important;
+} 
+
+.username_c19a55, .name__703b9, .nameGlow__703b9 {
+  /* color: #ccc !important; */
+}
+
+
+.mentioned__5126c:before {
+  background: #ccc !important;
+}
+
+.icon_c9d15c > path{
+  fill: #ccc !important;
+}
+
+
+/* profile tweask */
+
+.empty__7ff05, .user-profile-modal-v2 .container_ab8609,  .user-profile-popout .container_ab8609{
+  display: none !important;
+}
+
+.user-profile-modal-v2 .card__39ec2, .clickableContainer__39ec2:hover > .card__39ec2 {
+  background-color: #000 !important;
+}
+
+.card__39ec2 {
+  background-color: #000 !important;
+
+}
+
+/* button edit prof */
+.footer__5be3e, .headerText__99e7c, .privateChannelRecipientsInviteButtonIcon__99e7c, .privateChannelRecipientsInviteButtonIconContainer__99e7c{
+  display: none !important;
+}
+
+
+
+.ee71ee16cc02184d-roleIcon  {
+  display: none;
+}
+
+
+
+.dfb989b3f435152a-container {
+  opacity: 1 !important;
+}
+
+
+.dfb989b3f435152a-innerContainer {
+  white-space: none !important;
+}
+
+.dfb989b3f435152a-container,
+.dfb989b3f435152a-container .dfb989b3f435152a-innerContainer {
+    color: #8c8c8c !important;                  /* plain white text */
+    text-shadow: none !important;              /* remove glow/toon/neon shadows */
+    text-decoration: none !important;          /* remove underline/strikethrough etc */
+    filter: none !important;                   /* remove any filters */
+    -webkit-text-stroke: 0 !important;         /* remove any strokes */
+    background: none !important;               /* remove any background colors or gradients */
+    --custom-display-name-styles-main-color: #8c8c8c !important;
+    --custom-display-name-styles-light-1-color: #fff !important;
+    --custom-display-name-styles-light-2-color: #fff !important;
+    --custom-display-name-styles-dark-1-color: #fff !important;
+    --custom-display-name-styles-dark-2-color: #fff !important;
+    --custom-display-name-styles-toon-stroke-color: #fff !important;
+    --custom-display-name-styles-neon-stroke-color: #fff !important;
+}
+
+
+.vc-permviewer-role-button { padding: 2px }
+
+[class^=roleTag] > [class^=role] {
+    border-radius: var(--radius-sm);
+    gap: 4px;
+    padding: 0 4px;
+    > [class^=roleCircle] { margin: unset; }
+    > span > [class^=roleIcon] {
+        height: 16px;
+        width: 16px;
+        margin-inline-start: unset;
+        vertical-align: top;
+        content: var(--role-icon-url-128);
+    }
+    > [class^=removeButton] {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        opacity: 0;
+        &:hover { opacity: 1; }
+    }
+}
+
+
+
+
+
+
+/* Dubyas list of annoying stuff he hides in discord using Quick CSS */
+
+/* Want to have this be synced up with your Discord so you don't need to re-copy and paste this for new additions?
+ * Feel free to just import this gist directly by adding the following line:
+ * @import url("https://raw.githubusercontent.com/DubyaDude/DubyasCleanupOfDiscord/main/DubyasCleanupOfDiscord.css");
+ */
+
+/* Disable profile edit page upsell */
+div[class^="settingsPage_"] > div > div[class^="container_"],
+div[class^="settingsPage_"] > div > div[class*="floatingNitroUpsell_"],
+div[class^="settingsPage_"] > div > div > div[class*="tryItOutSection_"],
+/* Disable profile view upsell */
+aside[class*="upsellContainer_"],
+/* Disable character count upsell */
+div[class^="characterCount_"] > div[class*="upsell_"]
+{
+    display:none;
+}
+
+
+/* Disable emoji inspection upsell (ty Regalia) */
+div[class^="emojiSection_"] > button[class^="shinyButton_"],
+div[class*="burstReactionTooltipPrompt_"]
+{
+    display:none;
+}
+
+/* Disable Gift Button(s) (in chat) */
+div[aria-label="Send a gift"]
+{
+    display: none;
+}
+
+/* Hide Channel App Launcher in chat */
+[class$="app-launcher-entrypoint"]
+{
+    display:none;
+}
+
+/* Hide things in DMs page */
+li div a[href="/shop"], /* Hide 'Shop' Tab */
+li div a[href="/quest-home"], /* Hide 'Quest' Tab */
+li div a[href="/store"] /* Hide 'Ntiro' Tab */
+{
+}
+
+/* Profile effects */
+/* [class*="profileEffects_"]
+{
+    display: none;
+} */
+
+/* Avatar Decorations */
+/* svg[class^="avatarDecoration_"],
+img[class^="avatarDecoration_"], */
+
+/* Hide nameplates background decoration on members list and DM list (ty Regalia) */
+/* DMs */
+/* li[class*="dm_"] > div > div[class*="container_"]:has(div[class^=videoContainer_], img[class*=img_]){
+    background: none !important; 
+    display: none;
+} */
+/* Image */
+/* div[class*="member_"] > div > div[class*="container_"] > :is(div[class^=videoContainer_], img[class*=img_]) {
+    display: none;
+} */
+/* Color fade */
+/* div[class*="member_"] > div > div[class*="container_"]:has(div[class^=videoContainer_], img[class*=img_]) {
+    background: none !important; 
+} */
+/* Self */
+/* div[class*="fitInAccount_"] > :is(div[class^=videoContainer_], img[class*=img_]) {
+    display: none; 
+}
+div[class*="fitInAccount_"]:has(div[class^=videoContainer_], img[class*=img_]) {
+    background: none !important; 
+} */
+
+/* Disable nitro icon on members list hover and opening nitro page */
+div[class*=nameAndDecorators_] > span > div[role="button"]:has(svg[class*=premiumIcon])
+{
+    pointer-events: none;
+}
+
+/* Disable clan tag in messages, memebers list, and popout profile view */
+
+
+/* Hide 'Explore Discoverable Servers'/'Discover' in server page */
+div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-button"])
+{
+  display: none;
+}
+
+/* Make Super Reactions less annoying (ty Regalia) */
+div[class^="effectsWrapper_"]
+{
+    display: none;
+} 
+img.emoji
+{
+    opacity: 100;
+}
+div[class*="shakeReaction_"]
+{
+    animation: none !important;
+}
+
+
+/* if using browser version, change "desktop" to "browser" */
+/* if using ptb/canary build, change "main" to "experimental" */
+
+/*customise top bar*/
+:root {
+    /* controls the vertical position of the window buttons */
+    --vr-header-snippet-top: 0px !important;
+    /* controls the space above the server list */
+    --vr-header-snippet-server-padding: 16px !important;
+    /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
+    --vr-header-snippet-space: 228px !important;
+    /* controls the space to the right of the window buttons, good if you are using themes like midnight which add padding to the bar */
+    --vr-header-snippet-button-padding: 8px !important;
+    /* !DESKTOP SNIPPET ONLY! If set to none instead of flex, hides the window control buttons */
+    --vr-header-snippet-winbuttons: flex !important;
+
+
+}
+
+.section[aria-label="User area"], div[class*="sidebar_"] > section[aria-label] {
+  background-color: #000 !important;
+}
+
+.progress__0d0f9 {
+  background: #151515 !important;
+  box-shadow: none !important;
+}
+
+.refresh-active-now .header__00943 {
+  background: #000 !important;
+
+}
+
+.badge_c99c29, .iconBadgeBottom__9293f, .iconBadge__9293f {
+  background: #656565 !important;
+}
+
+
+:root {
+    --dynamic-opacity: 1;
+    --dynamic-background-base: #000 !important;
+    --dynamic-background-tinted: #000 !important;
+    --dynamic-background-tinted-50: #000 !important;
+    --background-base: #000 !important;
+    --background-tinted: #000 !important;
+    --text-base: rgba(255, 255, 255, 255);
+    --text-bright-accent: rgba(255, 255, 255, 255);
+    --text-subdued: rgba(178, 210, 227, 255);
+}
+
+body {
+    --dynamic-opacity: 1;
+    --dynamic-background-base: #000 !important;
+    --dynamic-background-tinted: #000 !important;
+    --dynamic-background-tinted-50: #000 !important;
+    --background-base: #000 !important;
+    --background-tinted: #000 !important;
+    --text-base: rgba(255, 255, 255, 255);
+    --text-bright-accent: rgba(255, 255, 255, 255);
+    --text-subdued: rgba(178, 210, 227, 255);
+}
+
+/* spotify tingy */
+
+.BackgroundColorContainer_backgroundColorContainer__YZSQ7, .OverflowMenuBase_wrapper__CyfQs{
+  background-color: #000 !important;
+  background: #000 !important;
+}
+
+
+
+iframe[src*="spotify"] {
+  filter: grayscale(1) brightness(0.6) contrast(2) !important;
+  border: 1px solid rgb(121, 121, 121);
+  border-radius: 14px;
+}
+
+
+
+/* Spotify root */
+[data-testid="embed-widget-container"] {
+  --dynamic-background-base: #0f0f0f !important;
+  --dynamic-background-tinted: #0f0f0f !important;
+  --dynamic-background-tinted-50: #0f0f0f !important;
+  --background-base: #0f0f0f !important;
+  --background-tinted: #0f0f0f !important;
+
+  --text-base: #ffffff !important;
+  --text-bright-accent: #ffffff !important;
+  --text-subdued: #888888 !important;
+
+  background: #0f0f0f !important;
+}
+
+/* Actual painted background div */
+[data-testid="embed-widget-container"] 
+.BackgroundColorContainer_backgroundColorContainer__YZSQ7 {
+  background: #0f0f0f !important;
+}
+
+/* Buttons + icons */
+[data-testid="embed-widget-container"] svg,
+[data-testid="embed-widget-container"] path {
+  fill: #ffffff !important;
+}
+
+/* Links + titles */
+[data-testid="embed-widget-container"] a,
+[data-testid="embed-widget-container"] span,
+[data-testid="embed-widget-container"] h1,
+[data-testid="embed-widget-container"] h2 {
+  color: #ffffff !important;
+}
+
+
+.BackgroundColorContainer_backgroundColorContainer__YZSQ7, .OverflowMenuBase_wrapper__CyfQs {
+  border: 1px solid #fff !important;
+}
+
+
+:where(.banner__68edb):before {
+  border: none !important;
+}
+
+
+
+.messagelogger-deleted {
+  --text-default: var(--status-danger, #ff5353) !important;
+  --interactive-icon-default: var(--status-danger, #ff5353) !important;
+  --text-muted: var(--status-danger, #ff5353) !important;
+  --embed-title: var(--red-460, #ff5353) !important;
+  --text-link: var(--red-460, #ff5353) !important;
+  --text-strong: var(--red-460, #ff5353) !important;
+}
+
+.copyOnlyText__10651 {
+  display: none;
+}
+
+
+.text__87e56 {
+  color: #fff !important;
+}
+
+
+.icon_a629d4 {
+  background-color: #000 !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  font-family: "Manrope", sans-serif;
+}
