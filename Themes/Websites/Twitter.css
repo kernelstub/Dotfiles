@@ -1,0 +1,205 @@
+/* change this to your favourite colour */
+  :root {
+
+--custom: rgb(117, 117, 117);
+
+--custom-rgb: rgb(117, 117, 117);
+
+--custom-cval: rgb(117, 117, 117);
+  }
+
+  span[style*="color: rgb(29, 155, 240)"] {
+
+    color: var(--custom) !important;
+  }
+
+  a[style*="color: rgb(29, 155, 240)"] {
+
+    color: var(--custom) !important;
+  }
+
+  span[style*="color: rgb(29, 155, 240)"] {
+
+    color: var(--custom) !important;
+  }
+
+  button[style*="background-color: rgb(29, 155, 240)"] {
+    background-color: var(--custom) !important;
+  }
+
+  /* twitter logo, tweet toolbar icons, links, verified checkmark */
+  .r-1cvl2hr {
+    color: var(--custom) !important;
+  }
+  .r-1cvl2hr path {
+    fill: var(--custom) !important;
+  }
+
+
+  /* notification icon, dm chat message */
+  .r-l5o3uw {
+    background-color: var(--custom) !important;
+  }
+
+  /* hovered message */
+  .r-1vtznih {
+    background-color: rgb(117, 117, 117) !important;
+  }
+
+  .r-eff69c {
+    background-color: rgb(117, 117, 117) !important;
+  }
+  
+  .r-yuvema {
+    background-color: rgb(117, 117, 117) !important;
+  }
+
+  /* compose tweet button */
+  a[data-testid="SideNav_NewTweet_Button"] {
+
+    background-color: var(--custom) !important;
+  }
+
+  /* haven't seen this one in person  */
+  link[rel="mask-icon"] {
+    color: var(--custom) !important;
+  }
+
+  /* tweet characters remaining circle */
+  div[role="progressbar"] svg circle[stroke="#1D9BF0"] {
+    stroke: var(--custom) !important;
+  }
+  div[role="progressbar"] svg circle[fill="#1D9BF0"] {
+    fill: var(--custom) !important;
+  }
+
+  /* progressbar throbber */
+  div[role="progressbar"] svg circle[style*="stroke: rgb(29, 155, 240)"] {
+    stroke: var(--custom) !important;
+  }
+
+
+
+  /* selected DM conversation */
+  .r-1pbtemp {
+
+    border-right-color: var(--custom) !important;
+  }
+
+
+
+  .r-vhj8yc {
+    border-color: var(--custom) !important;
+  }
+
+
+
+  /* makes sure bg_color doesn't transition 
+
+when I'm getting rid of bg_color and placing bg  */
+  .r-6416eg {
+    transition-property: box-shadow !important;
+  }
+
+
+
+  /* font-size slider, not selected portion */
+  div[style*="background-color: rgb(142, 205, 248);"] {
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%) bottom,
+
+    linear-gradient(to bottom, var(--custom) 0%, var(--custom) 100%) top !important;
+  }
+
+
+
+  /* border around selected stuff */
+  div[style*="border-color: rgb(29, 155, 240);"] {
+
+    border-color: var(--custom) !important;
+  }
+
+
+
+  /*  dark-mode (or dim-mode where applicable) */
+  div[style*="color: rgb(29, 155, 240);"] {
+
+    color: var(--custom) !important;
+  }
+
+
+
+  div[style*="color: rgb(29, 155, 240);"] > svg {
+
+    color: var(--custom) !important;
+  }
+
+
+
+  a[style*="color: rgb(29, 155, 240);"] {
+
+    color: var(--custom) !important;
+  }
+
+  /* Red background on hovered buttons */
+  .r-1peqgm7 {
+    background-color: rgba(217, 0, 37, 0.1);
+  }
+
+  .r-r18ze4 {
+    background-color: rgba(217, 0, 37, .20);
+  }
+
+
+
+  /* Post/reply button */
+  button[data-testid="tweetButtonInline"] {
+    background-color: var(--custom) !important;
+  }
+
+  button[data-testid="tweetButtonInline"]:hover {
+    background-color: var(--custom) !important;
+    filter: brightness(80%) !important;
+  }
+  button[data-testid="tweetButtonInline"] > div > span > span {
+    color: #000;
+  }
+
+
+  /* Bottom Post button */
+  a[aria-label="Post"] {
+    background-color: var(--custom) !important;
+  }
+
+  a[aria-label="Post"]:hover {
+
+    background-color: var(--custom) !important;
+    filter: brightness(80%) !important;
+  }
+  a[aria-label="Post"] > div > span > div > div > span > span {
+    color: #000;
+  }
+
+
+
+
+  div[style*="background-color: rgb(29, 155, 240);"] {
+
+    background-color: var(--custom) !important;
+  }
+
+
+
+  *[style*="background-color: rgb(29, 155, 240);"] {
+
+    background-color: var(--custom) !important;
+  }
+
+
+
+  .r-1rfi0ky {
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.22) 100%) bottom,
+
+    linear-gradient(to bottom, var(--custom) 0%, var(--custom) 100%) top !important;
+  }
