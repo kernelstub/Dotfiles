@@ -1,0 +1,239 @@
+/* ==UserStyle==
+@name       youtube.com
+@version    20251029.18.20
+@namespace  ?
+==/UserStyle== */
+
+/* ==UserStyle==
+@name         Ultra Clean Youtube
+@version      20250526.21.20
+@namespace    ?
+@description  Applies Vazirmatn font to all text, hides YouTube's video action menu, and removes a specific button from the top-right header.
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+* {
+    font-family: "vazirmatn", sans-serif !important;
+}
+
+:root {
+    --yt-spec-call-to-action: #656565 !important;
+    --yt-spec-red-indicator: #656565 !important;
+    --yt-spec-themed-blue: #656565 !important;
+    
+    
+    --yt-endpoint-color: #656565 !important;
+    --yt-lightsource-secondary-title-color: #656565 !important;
+    --yt-endpoint-visited-color: #656565 !important;
+    --yt-lightsource-secondary-title-color: #656565 !important;
+}
+
+
+
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.watch-root-element.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#below.style-scope.ytd-watch-flexy ytd-merch-shelf-renderer.style-scope.ytd-watch-flexy, .ytd-notification-topbar-button-renderer, .top-level-buttons style-scope ytd-menu-renderer, html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.watch-root-element.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#below.style-scope.ytd-watch-flexy ytd-watch-metadata.watch-active-metadata.style-scope.ytd-watch-flexy div#above-the-fold.style-scope.ytd-watch-metadata div#top-row.style-scope.ytd-watch-metadata div#actions.item.style-scope.ytd-watch-metadata div#actions-inner.style-scope.ytd-watch-metadata div#menu.style-scope.ytd-watch-metadata ytd-menu-renderer.style-scope.ytd-watch-metadata div#top-level-buttons-computed.top-level-buttons.style-scope.ytd-menu-renderer, html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.watch-root-element.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#below.style-scope.ytd-watch-flexy ytd-watch-metadata.watch-active-metadata.style-scope.ytd-watch-flexy div#above-the-fold.style-scope.ytd-watch-metadata div#top-row.style-scope.ytd-watch-metadata div#actions.item.style-scope.ytd-watch-metadata div#actions-inner.style-scope.ytd-watch-metadata div#menu.style-scope.ytd-watch-metadata ytd-menu-renderer.style-scope.ytd-watch-metadata yt-button-shape#button-shape.style-scope.ytd-menu-renderer {
+    display: none !important;
+}
+
+
+ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette] .byline-title.ytd-playlist-panel-renderer, ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette] .publisher.ytd-playlist-panel-renderer, ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette] .publisher.ytd-playlist-panel-renderer:not([is-empty]) + .index-message-wrapper.ytd-playlist-panel-renderer::before, ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette] .byline-title.ytd-playlist-panel-renderer:not([hidden]) ~ .index-message-wrapper.ytd-playlist-panel-renderer::before, ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette] .index-message-wrapper.ytd-playlist-panel-renderer {
+        --yt-endpoint-color: #656565 !important;
+    --yt-lightsource-secondary-title-color: #656565 !important;
+    --yt-endpoint-visited-color: #656565 !important;
+    --yt-lightsource-secondary-title-color: #656565 !important;
+}
+
+
+a.yt-simple-endpoint.yt-formatted-string:hover {
+    color: #656565 !important;
+            --yt-endpoint-color: #656565 !important;
+    --yt-lightsource-secondary-title-color: #656565 !important;
+    --yt-endpoint-visited-color: #656565 !important;
+}
+
+a.yt-simple-endpoint.yt-formatted-string {
+    color: #656565 !important;
+    
+            --yt-endpoint-color: #656565 !important;
+    --yt-lightsource-secondary-title-color: #656565 !important;
+    --yt-endpoint-visited-color: #656565 !important;
+}
+
+
+
+@font-face {
+  font-family: 'Iosevka Nerd Font';
+  src: url('https://cdn.jsdelivr.net/gh/spectralinsights/fonts/Iosevka/IosevkaNerdFontMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*    {
+/*   font-family: 'Iosevka Nerd Font', monospace !important; */
+}
+}#description.ytd-watch-metadata {
+
+    
+    
+    background: transparent !important;
+}
+
+
+
+ytd-mini-guide-renderer.ytd-app {
+display: none;
+}
+
+.ytd-app {
+
+    background: #000 !important;}
+
+
+#logo.ytd-masthead {
+    display: none;
+}
+
+yt-smartimation.ytd-subscribe-button-renderer {
+    display: none;
+}
+
+ytd-menu-renderer:not([condensed]) .ytd-menu-renderer[button-renderer] + .ytd-menu-renderer[button-renderer], .ytd-menu-renderer[button-renderer] + yt-button-view-model.ytd-menu-renderer, yt-button-view-model.ytd-menu-renderer + yt-button-view-model.ytd-menu-renderer, .ytd-menu-renderer[button-renderer] + template.ytd-menu-renderer + #button.ytd-menu-renderer, yt-button-view-model.ytd-menu-renderer + template.ytd-menu-renderer + #button.ytd-menu-renderer, #flexible-item-buttons.ytd-menu-renderer:not(:empty) > .ytd-menu-renderer[button-renderer], #top-level-buttons-computed.ytd-menu-renderer:not(:empty) > .ytd-menu-renderer[button-renderer] ~ .ytd-menu-renderer[button-renderer], #flexible-item-buttons.ytd-menu-renderer:not(:empty) > yt-button-view-model.ytd-menu-renderer, #top-level-buttons-computed.ytd-menu-renderer:not(:empty) + #flexible-item-buttons.ytd-menu-renderer + #button.ytd-menu-renderer {
+    display:none;
+}
+
+
+
+#expandable-metadata.ytd-watch-flexy:not(:empty){
+    display:none;
+}
+
+.iv-branding{
+    display:none;
+}
+
+
+#container.yt-chip-cloud-renderer
+{
+    display:none;
+}
+
+#sponsor-button.ytd-video-owner-renderer:not(:empty), #purchase-button.ytd-video-owner-renderer:not(:empty), #analytics-button.ytd-video-owner-renderer:not(:empty) {
+        display:none;
+}
+
+.ytp-progress-bar-container:not([aria-disabled="true"]), .ytp-progress-list {
+    background: transparent;
+}
+
+
+.ytp-play-progress, .ytp-swatch-background-color {
+    background: #353535;
+}
+
+#progress.ytd-thumbnail-overlay-resume-playback-renderer, .badge-style-type-live-now-alternate.ytd-badge-supported-renderer{
+    background: #353535;
+}
+
+.ytp-settings-button.ytp-hd-quality-badge::after, .ytp-settings-button.ytp-hdr-quality-badge::after, .ytp-settings-button.ytp-4k-quality-badge::after, .ytp-settings-button.ytp-5k-quality-badge::after, .ytp-settings-button.ytp-8k-quality-badge::after, .ytp-settings-button.ytp-3d-badge-grey::after, .ytp-settings-button.ytp-3d-badge::after{
+    background: transparent;
+}
+
+
+
+#container.ytd-masthead, #tabs-inner-container.ytd-tabbed-page-header {
+    background: #000;
+}
+
+
+ytd-tabbed-page-header.grid-6-columns #page-header.ytd-tabbed-page-header, ytd-tabbed-page-header.grid-6-columns[has-inset-banner] #page-header-banner.ytd-tabbed-page-header {
+    background: #000;
+}
+
+
+ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette] .header.ytd-playlist-panel-renderer {
+    background: #000;
+    border: 1px solid #101010 !important;
+}
+
+
+.yt-core-attributed-string__link--call-to-action-color {
+    color: #656565 !important;
+}
+
+
+.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment {
+    background: #656565 !important;
+}
+
+
+.yt-badge-shape--commerce {
+    color: #656565 !important;
+}
+
+
+.ytCoreImageContentModeScaleToFill {
+    filter: grayscale(100%);
+}
+
+
+#country-code {
+    display: none !important;
+}
+
+.yt-spec-touch-feedback-shape {
+    display: none !important;
+    
+}
+
+
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+        color: #656565 !important;
+
+}
+
+
+
+
+ytd-rich-metadata-row-renderer:not([fixie]) #contents.ytd-rich-metadata-row-renderer .ytd-rich-metadata-row-renderer {
+    background: #000;
+    border: 2px solid #101010 !important;
+}
+
+
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text:hover, .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline:hover {
+    background: #353535 !important;
+}
+
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline:hover  {
+    background: #000;
+    border: 2px solid #101010 !important;
+        color: #656565 !important;
+    
+}
+
+
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline  {
+    background: #000;
+    border: 2px solid #101010 !important;
+        color: #656565 !important;
+    
+}
+
+
+.yt-core-attributed-string--link-inherit-color .yt-core-attributed-string__link--call-to-action-color {
+        background: #171717;
+}
+
+
+#button.ytd-menu-renderer yt-icon.ytd-menu-renderer, #button.ytd-menu-renderer .ytIconWrapperHost.ytd-menu-renderer {
+    display:none;
+}
+
+
+#sections.ytd-guide-renderer > ytd-guide-section-renderer.ytd-guide-renderer:not(:first-child), #sections.ytd-guide-renderer > ytd-guide-subscriptions-section-renderer.ytd-guide-renderer{
+    display:none;
+}
+
+
+#footer {display:none;}
