@@ -67,7 +67,20 @@ cp -r config/* ~/.config/
 echo "🖼️ Installing wallpapers..."
 
 mkdir -p ~/Pictures/Wallpapers
-cp -r Wallpapers/* ~/Pictures/Wallpapers/ 2>/dev/null || true
+cp -r wallpapers/* ~/Pictures/Wallpapers/ 2>/dev/null || true
+
+# ------------------
+# 🔤 Install fonts
+# ------------------
+echo "🔤 Installing fonts..."
+
+mkdir -p ~/.local/share/fonts
+
+# Copy all fonts from repo
+cp -r fonts/* ~/.local/share/fonts/ 2>/dev/null || true
+
+# Refresh font cache
+fc-cache -f -v
 
 # ------------------
 # 🧩 Apply GNOME settings
