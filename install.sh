@@ -41,7 +41,7 @@ cp -r extensions/* ~/.local/share/gnome-shell/extensions/ 2>/dev/null || true
 echo "🎨 Installing GTK themes..."
 
 mkdir -p ~/.themes
-cp -r GTK/Theme/* ~/.themes/
+cp -r system/Theme/* ~/.themes/
 
 # ------------------
 # 🖱️ Icons & cursors
@@ -49,7 +49,7 @@ cp -r GTK/Theme/* ~/.themes/
 echo "🖱️ Installing icons & cursors..."
 
 mkdir -p ~/.icons
-cp -r GTK/Icons/* ~/.icons/
+cp -r system/Icons/* ~/.icons/
 
 # ------------------
 # ⚙️ App configs (~/.config)
