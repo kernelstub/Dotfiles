@@ -17,7 +17,7 @@ log "Starting GNOME dotfiles installation..."
 if [ ! -f ".git/config" ]; then
     TEMP_DIR=$(mktemp -d)
     log "Cloning repo into $TEMP_DIR"
-    git clone --depth 1 https://github.com/kernelstub/Dotfiles.git "$TEMP_DIR"
+    git clone --depth 1 https://github.com/kernelstub/Dotfiles.git "$TEMP_DIR" >/dev/null 2>&1
     cd "$TEMP_DIR"
 else
     log "Running inside existing repo"
