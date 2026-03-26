@@ -23,20 +23,20 @@ else
     log "Running inside existing repo"
 fi
 
-# ------------------
-# Detect package manager
-# ------------------
-# if command -v apt >/dev/null; then
-#     PKG_MANAGER="apt"
-#     sudo apt update
-# elif command -v pacman >/dev/null; then
-#     PKG_MANAGER="pacman"
-# elif command -v dnf >/dev/null; then
-#     PKG_MANAGER="dnf"
-# else
-#     error "No supported package manager found"
-#     exit 1
-# fi
+------------------
+Detect package manager
+------------------
+if command -v apt >/dev/null; then
+    PKG_MANAGER="apt"
+    sudo apt update
+elif command -v pacman >/dev/null; then
+    PKG_MANAGER="pacman"
+elif command -v dnf >/dev/null; then
+    PKG_MANAGER="dnf"
+else
+    error "No supported package manager found"
+    exit 1
+fi
 
 install_pkg() {
     if ! command -v "$1" >/dev/null 2>&1; then
