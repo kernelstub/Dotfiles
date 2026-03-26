@@ -23,9 +23,9 @@ else
     log "Running inside existing repo"
 fi
 
-------------------
-Detect package manager
-------------------
+# ------------------
+# Detect package manager
+# ------------------
 if command -v apt >/dev/null; then
     PKG_MANAGER="apt"
     sudo apt update
