@@ -43,9 +43,9 @@ install_pkg() {
     if ! command -v "$1" >/dev/null 2>&1; then
         log "Installing dependency: $1"
         case "$PKG_MANAGER" in
-            apt) sudo apt install -y "$1" ;;
-            pacman) sudo pacman -S --noconfirm "$1" ;;
-            dnf) sudo dnf install -y "$1" ;;
+            apt) sudo apt install -y "$1" >/dev/null 2>&1 ;;
+            pacman) sudo pacman -S --noconfirm "$1" >/dev/null 2>&1 ;;
+            dnf) sudo dnf install -y "$1" >/dev/null 2>&1 ;;
         esac
     else
         log "Dependency already installed: $1"
