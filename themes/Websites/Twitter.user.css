@@ -1,3 +1,14 @@
+@-moz-document domain("x.com") {
+
+}/* ==UserStyle==
+@name       Red Twitter
+@version    v2.0
+@author     sophiiss
+@license    MIT
+@namespace  Twitter Mods
+==/UserStyle== */
+
+@-moz-document domain("x.com") {
 /* change this to your favourite colour */
   :root {
 
@@ -203,3 +214,4 @@ when I'm getting rid of bg_color and placing bg  */
 
     linear-gradient(to bottom, var(--custom) 0%, var(--custom) 100%) top !important;
   }
+}

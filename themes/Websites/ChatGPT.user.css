@@ -1,0 +1,111 @@
+@-moz-document domain("chatgpt.com") {
+
+}/* ==UserStyle==
+@name         Transparent Background of ChatGPT
+@version      20250111.16.09
+@namespace    https://userstyles.world/user/Sam_Naik
+@description  Transparent theme for the ChatGPT
+@author       Sam_Naik
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("chatgpt.com") {
+/* Make the overall background transparent */
+body,
+#__next {
+    background-color: #000 !important;
+}
+
+/* Remove background from chat container and main sections */
+div[class*="flex"] {
+    background-color: #000 !important;
+}
+
+/* Transparent chat messages */
+div[class*="group"] {
+    background-color: #000 !important;
+}
+
+/* Transparent sidebar */
+aside,
+nav,
+div[class*="sidebar"] {
+    background-color: #000 !important;
+}
+
+/* Additional cleanup for any stubborn elements */
+* {
+    background-color: transparent !important;
+}
+
+.menu-dots-container {
+    /* Replace .menu-dots-container with the actual selector */
+    background: #000 !important;
+    background-image: none !important;
+    /* Important if it has a background image */
+    /*background-gradient: none !important; /* Important if it has a gradient */
+}
+
+.ltr\:bg-gradient-to-l:where([dir="ltr"], [dir="ltr"] *) {
+    background-image: none !important;
+}
+
+/* input text area */
+.rounded-3xl.bg-token-message-surface {
+    background: linear-gradient(144deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.08) 25%, rgba(255, 255, 255, 0.03027083196559875) 50%, rgba(255, 255, 255, 0.08) 75%, rgba(255, 255, 255, 0.1) 100%) ! important;
+}
+
+/* ChatGPT model selection hover section */
+.rounded-2xl.popover.bg-token-main-surface-primary {
+    background : rgba(0,0,0,0.8) !important;
+}
+
+/* Time duration in chat history list */
+.text-xs.font-semibold.text-token-text-primary {
+    background: linear-gradient(144deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 100%) ! important;
+    border-radius: 5px !important;
+}
+
+/* chat input text area + genrated code-language section */
+.dark\:bg-token-main-surface-secondary:is(.dark *) {
+    background: linear-gradient(144deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.03027083196559875) 50%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.07) 100%) ! important;
+}
+
+
+.dark\:text-black:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+}
+}@layer utilities {
+  @media (min-width: 48rem) {
+    .md\:px-\[60px\] {
+      padding-left: 60px;
+      padding-right: 60px;
+        background: #000 !important;
+    }
+  }
+} 
+
+
+#thread-bottom {
+    background: #000;
+}
+
+
+@layer utilities {
+  @container main (width >= 64rem) {
+    .\@w-lg\/main\:\[--thread-content-margin\:--spacing\(16\)\] {
+      --thread-content-margin: calc(var(--spacing)*16);
+      background: #000 !important;
+    }
+  }
+}
+
+@layer utilities {
+  @container main (width >= 64rem) {
+    .\@w-lg\/main\:\[--thread-content-margin\:var\(--thread-content-margin-lg\,calc\(var\(--spacing\)\*16\)\)\] {
+      --thread-content-margin: var(--thread-content-margin-lg,calc(var(--spacing) * 16));
+      background: black !important;
+    }
+  }
+}

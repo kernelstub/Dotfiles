@@ -1,0 +1,62 @@
+/* ==UserStyle==
+@name         Stremio Mono Theme
+@version      20251116.22.14
+@namespace    ?
+@description  monochrome theme for stremio
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("web.stremio.com") {
+:root {
+    --primary-accent-color: #555 !important;
+    
+}
+
+html body {
+    background: black !important;
+}
+
+.horizontal-nav-bar-container-Y_zvK .logo-container-jteMT .logo-oPx1q {
+    display: none;
+}
+
+.discover-container-L6OGL .discover-content-CRsRg .meta-preview-container-CoWs5 {
+    background: black !important;
+    
+}
+
+
+.metadetails-container-K_Dqa .background-image-layer-wJa90, .dropdown-MWaxp{
+    background: black !important;
+    
+}
+
+.streams-list-container-xYMJo .install-button-container-Q60yJ {
+    background: #555 !important;
+}
+
+.dropdown-MWaxp.open-yuN4f {
+    max-height: none;
+}
+
+
+.dropdown-MWaxp {
+    drop-shadow: none;
+}
+
+
+.nav-tab-button-container-dYhs0.selected .icon-TzPrK, .nav-tab-button-container-dYhs0.selected .label-BCz2f {
+ color: #555 !important;   
+}
+
+
+.search-bar-container-asfq1 .menu-container-GcXNG {
+    background: black !important;
+    
+}
+
+
+.search-bar-container-asfq1 .menu-container-GcXNG .items-P1xS5 .item-TgYCX:hover {
+    background: #555 !important;
+}
+}
