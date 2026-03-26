@@ -26,6 +26,7 @@ fi
 # ------------------
 # Detect package manager
 # ------------------
+PKG_MANAGER=""  # initialize to empty
 if command -v apt >/dev/null; then
     PKG_MANAGER="apt"
     sudo apt update
