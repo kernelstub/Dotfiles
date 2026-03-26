@@ -14,25 +14,27 @@
 
 The repository can be installed directly using a single command:
 
+### Dotfiles
+
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/kernelstub/Dotfiles/main/install.sh)
 ````
 
-This will:
+### Web Themes
 
-1. Clone the repository to a temporary folder if needed
-2. Install dependencies for your system (supports `apt`, `pacman`, and `dnf`)
-3. Sync extensions, themes, icons, configs, wallpapers, and fonts
-4. Apply GNOME settings
-5. Enable extensions and apply the Colloid theme
-6. Set the first wallpaper found in the repository
+1. Install [Stylus for Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) or [Cascadea for Safari](https://cascadea.app/).
 
-Logs are saved to `~/gnome-dotfiles-install.log`.
+2. Install the themes:
 
-### Optional
+   * [ChatGPT.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/ChatGPT.user.css)
+   * [FontAndScrollbar.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/FontAndScrollbar.user.css)
+   * [Github.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/Github.user.css)
+   * [Gmail.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/Gmail.user.css)
+   * [Stremio.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/Stremio.user.css)
+   * [Twitter.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/Twitter.user.css)
+   * [YouTube.user.css](https://github.com/kernelstub/Dotfiles/raw/refs/heads/main/themes/Websites/YouTube.user.css)
 
-* Run multiple times safely (idempotent)
-* Automatically removes old Colloid themes and icons before syncing
+
 
 ## Supported Systems
 
