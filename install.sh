@@ -1,125 +1,191 @@
 #!/bin/bash
-set -e
+set -Eeuo pipefail
 
-echo "🚀 Installing GNOME dotfiles..."
+LOG_FILE="$HOME/gnome-dotfiles-install.log"
+
+log()   { echo "[$(date '+%Y-%m-%d %H:%M:%S')] → $*" | tee -a "$LOG_FILE"; }
+warn()  { echo "[$(date '+%Y-%m-%d %H:%M:%S')] [WARN] → $*" | tee -a "$LOG_FILE"; }
+error() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] [ERROR] → $*" | tee -a "$LOG_FILE" >&2; }
+
+trap 'error "Script failed at line $LINENO"' ERR
+
+log "Starting GNOME dotfiles installation..."
 
 # ------------------
-# 📦 Dependencies
+# Clone repo if running from curl
 # ------------------
-echo "📦 Installing dependencies..."
+if [ ! -f ".git/config" ]; then
+    TEMP_DIR=$(mktemp -d)
+    log "Cloning repo into $TEMP_DIR"
+    git clone --depth 1 https://github.com/kernelstub/Dotfiles.git "$TEMP_DIR"
+    cd "$TEMP_DIR"
+else
+    log "Running inside existing repo"
+fi
 
+# ------------------
+# Detect package manager
+# ------------------
 if command -v apt >/dev/null; then
+    PKG_MANAGER="apt"
     sudo apt update
-    sudo apt install -y gnome-shell-extensions curl jq dconf-cli
 elif command -v pacman >/dev/null; then
-    sudo pacman -Sy --noconfirm gnome-shell-extensions curl jq dconf
+    PKG_MANAGER="pacman"
 elif command -v dnf >/dev/null; then
-    sudo dnf install -y gnome-extensions-app curl jq dconf
+    PKG_MANAGER="dnf"
+else
+    error "No supported package manager found"
+    exit 1
+fi
+
+install_pkg() {
+    if ! command -v "$1" >/dev/null 2>&1; then
+        log "Installing dependency: $1"
+        case "$PKG_MANAGER" in
+            apt) sudo apt install -y "$1" ;;
+            pacman) sudo pacman -S --noconfirm "$1" ;;
+            dnf) sudo dnf install -y "$1" ;;
+        esac
+    else
+        log "Dependency already installed: $1"
+    fi
+}
+
+# ------------------
+# Dependencies
+# ------------------
+install_pkg curl
+install_pkg jq
+install_pkg dconf
+
+if [ "$PKG_MANAGER" = "apt" ]; then
+    install_pkg gnome-shell-extensions
+elif [ "$PKG_MANAGER" = "pacman" ]; then
+    install_pkg gnome-shell-extensions
+elif [ "$PKG_MANAGER" = "dnf" ]; then
+    install_pkg gnome-extensions-app
 fi
 
 # ------------------
-# 🔌 Install extensions
+# GNOME extensions
 # ------------------
-echo "🔌 Installing GNOME extensions..."
-
-while read -r ext; do
-    echo "→ $ext"
-    gnome-extensions install "$ext" 2>/dev/null || true
-done < extensions.txt
-
-# ------------------
-# 📂 Fallback: copy extensions
-# ------------------
-echo "📂 Copying extension files..."
-
-mkdir -p ~/.local/share/gnome-shell/extensions
-cp -r extensions/* ~/.local/share/gnome-shell/extensions/ 2>/dev/null || true
-
-# ------------------
-# 🎨 GTK Themes
-# ------------------
-echo "🎨 Installing GTK themes..."
-
-mkdir -p ~/.themes
-cp -r system/Theme/* ~/.themes/
+log "Installing GNOME extensions..."
+if [ -f extensions.txt ]; then
+    while read -r ext; do
+        [ -z "$ext" ] && continue
+        if gnome-extensions list | grep -q "$ext"; then
+            log "Extension already installed: $ext"
+        else
+            log "Installing extension: $ext"
+            gnome-extensions install "$ext" 2>/dev/null || warn "Failed to install $ext"
+        fi
+    done < extensions.txt
+else
+    warn "extensions.txt not found"
+fi
 
 # ------------------
-# 🖱️ Icons & cursors
+# Copy extension files
 # ------------------
-echo "🖱️ Installing icons & cursors..."
-
-mkdir -p ~/.icons
-cp -r system/Icons/* ~/.icons/
-
-# ------------------
-# ⚙️ App configs (~/.config)
-# ------------------
-echo "⚙️ Installing app configs..."
-
-mkdir -p ~/.config
-
-# Copy everything from repo config → ~/.config
-cp -r config/* ~/.config/
+EXT_DIR="$HOME/.local/share/gnome-shell/extensions"
+mkdir -p "$EXT_DIR"
+if [ -d extensions ]; then
+    log "Syncing extension files..."
+    rsync -a --ignore-existing extensions/ "$EXT_DIR/" || warn "Extension sync failed"
+fi
 
 # ------------------
-# 🖼️ Wallpapers
+# GTK Themes
 # ------------------
-echo "🖼️ Installing wallpapers..."
-
-mkdir -p ~/Pictures/Wallpapers
-cp -r wallpapers/* ~/Pictures/Wallpapers/ 2>/dev/null || true
-
-# ------------------
-# 🔤 Install fonts
-# ------------------
-echo "🔤 Installing fonts..."
-
-mkdir -p ~/.local/share/fonts
-
-# Copy all fonts from repo
-cp -r fonts/* ~/.local/share/fonts/ 2>/dev/null || true
-
-# Refresh font cache
-fc-cache -f -v
+if [ -d system/Theme ]; then
+    log "Installing GTK themes..."
+    mkdir -p ~/.themes
+    find ~/.themes -maxdepth 1 -type d -name "Colloid*" -exec rm -rf {} + 2>/dev/null || true
+    rsync -a system/Theme/ ~/.themes/
+fi
 
 # ------------------
-# 🧩 Apply GNOME settings
+# Icons & cursors
 # ------------------
-echo "🧩 Applying GNOME settings..."
-
-dconf load /org/gnome/ < gnome-settings.ini
-
-# ------------------
-# ✅ Enable extensions
-# ------------------
-echo "✅ Enabling extensions..."
-
-while read -r ext; do
-    gnome-extensions enable "$ext" 2>/dev/null || true
-done < extensions.txt
+if [ -d system/Icons ]; then
+    log "Installing icons & cursors..."
+    mkdir -p ~/.icons
+    find ~/.icons -maxdepth 1 -type d -name "Colloid*" -exec rm -rf {} + 2>/dev/null || true
+    rsync -a system/Icons/ ~/.icons/
+fi
 
 # ------------------
-# 🎯 Force theme (safety)
+# App configs
 # ------------------
-echo "🎯 Applying theme..."
-
-gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Colloid"
-gsettings set org.gnome.desktop.interface cursor-theme "Colloid-dark-cursors"
+if [ -d config ]; then
+    log "Syncing config files..."
+    mkdir -p ~/.config
+    rsync -a config/ ~/.config/
+fi
 
 # ------------------
-# 🖼️ Set wallpaper (optional)
+# Wallpapers
 # ------------------
-FIRST_WALLPAPER=$(find ~/Pictures/Wallpapers -type f | head -n 1)
+if [ -d wallpapers ]; then
+    log "Installing wallpapers..."
+    mkdir -p ~/Pictures/Wallpapers
+    rsync -a wallpapers/ ~/Pictures/Wallpapers/
+fi
 
+# ------------------
+# Fonts
+# ------------------
+if [ -d fonts ]; then
+    log "Installing fonts..."
+    mkdir -p ~/.local/share/fonts
+    rsync -a fonts/ ~/.local/share/fonts/
+    fc-cache -f >/dev/null 2>&1
+fi
+
+# ------------------
+# GNOME settings
+# ------------------
+if [ -f gnome-settings.ini ]; then
+    log "Applying GNOME settings..."
+    dconf load /org/gnome/ < gnome-settings.ini || warn "dconf failed"
+fi
+
+# ------------------
+# Enable extensions
+# ------------------
+if [ -f extensions.txt ]; then
+    log "Enabling extensions..."
+    while read -r ext; do
+        [ -z "$ext" ] && continue
+        if gnome-extensions list --enabled | grep -q "$ext"; then
+            log "Already enabled: $ext"
+        else
+            gnome-extensions enable "$ext" 2>/dev/null || warn "Failed to enable $ext"
+        fi
+    done < extensions.txt
+fi
+
+# ------------------
+# Apply theme
+# ------------------
+log "Applying theme settings..."
+gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Dark" || warn "GTK theme failed"
+gsettings set org.gnome.desktop.interface icon-theme "Colloid-Grey-Dark" || warn "Icon theme failed"
+gsettings set org.gnome.desktop.interface cursor-theme "Colloid-dark-cursors" || warn "Cursor theme failed"
+
+# ------------------
+# Wallpaper
+# ------------------
+FIRST_WALLPAPER=$(find ~/Pictures/Wallpapers -type f 2>/dev/null | head -n 1)
 if [ -n "$FIRST_WALLPAPER" ]; then
-    echo "🖼️ Setting wallpaper..."
-    gsettings set org.gnome.desktop.background picture-uri "file://$FIRST_WALLPAPER"
+    log "Setting wallpaper..."
+    gsettings set org.gnome.desktop.background picture-uri "file://$FIRST_WALLPAPER" || warn "Wallpaper failed"
+else
+    warn "No wallpaper found"
 fi
 
 # ------------------
-# 🎉 Done
+# Done
 # ------------------
-echo ""
-echo "🎉 Installation complete!"
-echo "⚠️ Log out and log back in to fully apply everything."
+log "Installation complete"
+log "Log out and back in to fully apply everything"
