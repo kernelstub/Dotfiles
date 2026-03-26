@@ -26,17 +26,17 @@ fi
 # ------------------
 # Detect package manager
 # ------------------
-if command -v apt >/dev/null; then
-    PKG_MANAGER="apt"
-    sudo apt update
-elif command -v pacman >/dev/null; then
-    PKG_MANAGER="pacman"
-elif command -v dnf >/dev/null; then
-    PKG_MANAGER="dnf"
-else
-    error "No supported package manager found"
-    exit 1
-fi
+# if command -v apt >/dev/null; then
+#     PKG_MANAGER="apt"
+#     sudo apt update
+# elif command -v pacman >/dev/null; then
+#     PKG_MANAGER="pacman"
+# elif command -v dnf >/dev/null; then
+#     PKG_MANAGER="dnf"
+# else
+#     error "No supported package manager found"
+#     exit 1
+# fi
 
 install_pkg() {
     if ! command -v "$1" >/dev/null 2>&1; then
@@ -64,24 +64,6 @@ elif [ "$PKG_MANAGER" = "pacman" ]; then
     install_pkg gnome-shell-extensions
 elif [ "$PKG_MANAGER" = "dnf" ]; then
     install_pkg gnome-extensions-app
-fi
-
-# ------------------
-# GNOME extensions
-# ------------------
-log "Installing GNOME extensions..."
-if [ -f extensions.txt ]; then
-    while read -r ext; do
-        [ -z "$ext" ] && continue
-        if gnome-extensions list | grep -q "$ext"; then
-            log "Extension already installed: $ext"
-        else
-            log "Installing extension: $ext"
-            gnome-extensions install "$ext" 2>/dev/null || warn "Failed to install $ext"
-        fi
-    done < extensions.txt
-else
-    warn "extensions.txt not found"
 fi
 
 # ------------------
