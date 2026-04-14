@@ -3075,7 +3075,7 @@ body {filter: grayscale(100%);}
     .orghead,
     .dropdown-toggle:hover,
     .dropdown-toggle.selected {
-        background: rgba(20, 20, 20, .4) !important;
+        background: rgba(0, 0, 0) !important;
     }
     /* repo/page header */
     .page-responsive .repohead,
@@ -3084,13 +3084,13 @@ body {filter: grayscale(100%);}
     .pagehead.bg-gray-light,
     main > .bg-gray-light,
     .application-main > .bg-gray-light {
-        background: rgba(20, 20, 20, .4) !important;
+        background: rgba(0, 0, 0) !important;
     }
     main > .bg-gray-light nav.bg-gray-light {
         background: none !important;
     }
     .explore-signup-entice-inner {
-        background: rgba(20, 20, 20, .9) !important;
+        background: rgba(0, 0, 0, .9) !important;
     }
     .starred-repo.navigation-focus,
     .marketing-section-stripe,
@@ -5900,7 +5900,7 @@ domain("gist.github.com") {
         color: /*[[base-color]]*/;
     }
     .gisthead {
-        background: rgba(20, 20, 20, .4) !important;
+        background: rgba(0, 0, 0) !important;
     }
     .discussion-timeline-actions {
         background: none !important;
@@ -5935,7 +5935,7 @@ domain("gist.github.com") {
         box-shadow: none !important;
     }
     .gist-banner {
-        background: rgba(20, 20, 20, .4) !important;
+        background: rgba(0, 0, 0) !important;
     }
     .Box-row,
     .Box-header,
@@ -10927,7 +10927,7 @@ domain("stylishthemes.github.io") {
         --color-neutral-muted: #40404066;
         --color-neutral-subtle: #40404016;
         --color-notifications-row-bg: #000000;
-        --color-page-header-bg: rgba(20, 20, 20, .4);
+        --color-page-header-bg: rgba(0, 0, 0);
         --color-pr-state-closed-bg: #d82828;
         --color-pr-state-closed-border: transparent;
         --color-pr-state-closed-text: #fff;
@@ -11019,7 +11019,6 @@ domain("stylishthemes.github.io") {
         --color-workflow-card-bg: #303030;
     }
 }
-
 
 
 
