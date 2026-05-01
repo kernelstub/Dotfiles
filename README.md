@@ -17,6 +17,10 @@ The repository can be installed directly using a single command:
 ### Dotfiles
 
 ```bash
+Make sure to have rsync and jq installed!!!!)
+````
+
+```bash
 bash <(curl -s https://raw.githubusercontent.com/kernelstub/Dotfiles/main/install.sh)
 ````
 
