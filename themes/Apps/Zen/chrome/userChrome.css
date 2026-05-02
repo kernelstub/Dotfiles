@@ -1,0 +1,539 @@
+:root {
+    --zen-colors-primary: #909090 !important;
+    --zen-colors-secondary: #000000 !important;
+    --zen-colors-tertiary: #000000 !important;
+    --zen-colors-border: border: 1px solid rgba(255, 255, 255, 0.1);
+    --zen-dialog-background: #000000 !important;
+    --lwt-accent-color-inactive: rgb(0, 0, 0) !important;
+    --zen-primary-color: #909090 !important;
+    --sidebar-border-color: #252525 !important;
+    --theme-body-background: #222222 !important;
+    --theme-accordion-header-background: #222222 !important;
+    --theme-toolbarbutton-checked-color: #222222 !important;
+    --zen-urlbar-background-base: #000 !important;
+    --panel-background: #000 !important;
+    --panel-color: #fff !important;
+    --arrowpanel-background: var(--panel-background) !important;
+    --panel-border-radius: 14px !important;
+    --panel-padding-block: 4px;
+    --panel-border-color: ThreeDShadow;
+    --panel-width: initial;
+    --panel-shadow-margin: 10px;
+    --panel-shadow: var(--zen-big-shadow);
+    --background-color-canvas: var(--panel-background);
+    --zen-toolbar-element-bg: #000 !important
+;
+}
+
+menupopup,
+panel {
+    color-scheme: light dark;
+
+    /* Colors */
+    --panel-background: #000 !important; /* your desired background */
+    --panel-color: #fff !important; /* your desired text color */
+
+    /* Spacing & border */
+    --panel-padding-block: 8px; /* vertical padding */
+    --panel-padding: var(--panel-padding-block) 12px; /* vertical + horizontal */
+    --panel-border-radius: 14px !important; /* round corners */
+    --panel-border-color: #333333 !important; /* border color */
+
+    /* Size */
+    --panel-width: 300px; /* fixed width or 'initial' */
+    --panel-shadow-margin: 10px;
+
+    /* Shadow */
+    --panel-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+    /* Canvas background fallback */
+    --background-color-canvas: var(--panel-background) !important;
+}
+
+#navigator-toolbox {
+    background-color: var(--zen-colors-secondary) !important;
+}
+
+#zen-appcontent-navbar-container {
+    background-color: var(--zen-colors-secondary) !important;
+}
+
+#navigator-toolbox:not([zen-sidebar-expanded="true"]) {
+    & #titlebar {
+        background-color: var(--zen-colors-secondary) !important;
+    }
+}
+
+#navigator-toolbox {
+    background-color: var(--zen-colors-secondary) !important;
+}
+
+#tabbrowser-tabs {
+    & .tabbrowser-tab {
+        #tabbrowser-tabs &:not([zen-essential="true"]) {
+            &:is([selected], [multiselected], [visuallyselected])
+                .tab-background {
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                background: var(--zen-colors-secondary) !important;
+            }
+        }
+    }
+}
+
+.tab-background[selected=""]::after {
+    background: var(--zen-colors-primary) !important;
+}
+
+#urlbar,
+#searchbar {
+    :root[lwt-toolbar-field="dark"] & {
+        background: var(--zen-colors-secondary) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+#tracking-protection-icon-container,
+#page-action-buttons {
+    display: none;
+}
+
+#urlbar-background {
+    background-color: var(--zen-colors-secondary) !important;
+}
+
+::selection {
+    background-color: var(--zen-colors-primary) !important;
+    color: #fff !important;
+}
+
+::-moz-selection {
+    background-color: var(--zen-colors-primary) !important;
+    color: #fff !important;
+}
+
+#zen-current-workspace-indicator,
+#tabs-newtab-button {
+    display: none !important;
+}
+
+#navigator-toolbox:not([zen-sidebar-expanded="true"]) {
+    & #zen-sidebar-top-buttons {
+        margin-top: 11px !important;
+    }
+}
+
+.identity-box-button,
+#tracking-protection-icon-container {
+    outline: none !important;
+    outline-offset: none !important;
+}
+
+:root:not([zen-single-toolbar="true"]) #zen-appcontent-wrapper {
+    background-color: var(--zen-colors-secondary) !important;
+}
+
+* {
+    -ms-overflow-style: none !important;
+    /* Internet Explorer and Edge */
+    scrollbar-width: none !important;
+    /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none !important;
+    /* Chrome, Safari, and Opera */
+}
+
+:root[zen-compact-mode="true"]:not([customizing]):not(
+        [inDOMFullscreen="true"]
+    ) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") or (-moz-bool-pref: "zen.view.use-single-toolbar") {
+        & #navigator-toolbox:not([animate="true"]) #titlebar {
+            @media (-moz-bool-pref: "zen.view.compact.color-sidebar") {
+                background-color: black !important;
+                background-attachment: scroll;
+                border: none !important;
+                background-size: auto;
+            }
+        }
+    }
+}
+
+:root[zen-compact-mode="true"]:not([customizing]):not(
+        [inDOMFullscreen="true"]
+    ) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
+        &:not([zen-single-toolbar="true"]) {
+            & #zen-appcontent-navbar-container {
+                @media (-moz-bool-pref: "zen.view.compact.color-toolbar") {
+                    background-size: 100% 2000px;
+                    background: black !important;
+                    background-color: black !important;
+                    border: none !important;
+                }
+            }
+        }
+    }
+}
+
+#browser:not(.browser-toolbox-background) {
+    background: black !important;
+}
+
+:root[zen-compact-mode="true"]:not([customizing]):not(
+        [inDOMFullscreen="true"]
+    ) {
+    background-color: #000000 !important;
+
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") or (-moz-bool-pref: "zen.view.use-single-toolbar") {
+        background-color: #000000 !important;
+
+        &
+            #navigator-toolbox[zen-has-hover]:not(
+                :has(#urlbar[zen-floating-urlbar="true"]:hover)
+            ),
+        & #navigator-toolbox[zen-user-show],
+        & #navigator-toolbox[zen-has-empty-tab],
+        & #navigator-toolbox[flash-popup],
+        & #navigator-toolbox[has-popup-menu],
+        & #navigator-toolbox[movingtab],
+        & #navigator-toolbox:has(.tabbrowser-tab:active),
+        &[zen-renaming-tab="true"] #navigator-toolbox,
+        &
+            #navigator-toolbox:has(
+                :is(
+                        [panelopen="true"],
+                        [open="true"],
+                        #urlbar:focus-within
+                    ):not(#urlbar[zen-floating-urlbar="true"]):not(tab):not(
+                        .zen-compact-mode-ignore
+                    )
+            ) {
+            &:not([animate="true"]) {
+                background-color: #000000 !important;
+
+                &:not([supress-primary-adjustment="true"]) {
+                    left: calc(var(--zen-element-separation) / -2);
+                    background-color: #000000 !important;
+                }
+            }
+        }
+    }
+}
+
+#titlebar,
+#navigator-toolbox {
+    background-color: #000000 !important;
+}
+
+:root[zen-compact-mode="true"]:not([customizing]):not(
+        [inDOMFullscreen="true"]
+    ) {
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") or (-moz-bool-pref: "zen.view.use-single-toolbar") {
+        & #navigator-toolbox:not([animate="true"]) #titlebar {
+            &::before {
+                background-image: none !important;
+                opacity: 1 !important;
+                background: black !important;
+                background-color: black;
+                background-attachment: scroll;
+                background-size: auto;
+            }
+        }
+    }
+}
+
+.sidebar-panel[lwt-sidebar] .sidebar-placesTreechildren {
+    background: black !important;
+}
+
+#sidebar-header {
+    font-size: 1.333em;
+    padding: 8px;
+    border-bottom: 1px solid var(--sidebar-border-color);
+    background: black !important;
+    width: 46px !important;
+}
+
+@media (-moz-platform: windows) {
+    #sidebar-search-container {
+        padding: 8px;
+        background: black !important;
+    }
+}
+
+.scrollbar-topmost {
+    display: none !important;
+}
+
+#zen-current-workspace-indicator-container {
+    display: none;
+}
+
+#zen-workspaces-button {
+    display: none !important;
+}
+
+.devtools-tabbar {
+    background-color: black !important;
+}
+
+:root.theme-dark {
+    /*
+     * Chrome colors
+     */
+    --theme-tab-toolbar-background: #000000 !important;
+    --theme-toolbar-background: #000000 !important;
+    --theme-selection-background: #222222 !important;
+    --theme-selection-color: #ffffff !important;
+    --theme-splitter-color: #151515 !important;
+    --theme-comment: #555555 !important;
+
+    /*
+     * Content Colors
+     */
+    --theme-body-background: #000000 !important;
+    --theme-sidebar-background: #000000 !important;
+    --theme-contrast-background: #000000 !important;
+
+    /*
+     * Text Colors
+     */
+    --theme-body-color: #c0c0c0 !important;
+    --theme-body-color-alt: #a8a8a8 !important;
+    --theme-content-color1: #888888 !important;
+    --theme-content-color2: #999999 !important;
+    --theme-content-color3: #aaaaaa !important;
+
+    /*
+     * Highlight Colors
+     */
+    --theme-highlight-blue: #777777 !important;
+    --theme-highlight-purple: #666666 !important;
+    --theme-highlight-pink: #555555 !important;
+    --theme-highlight-red: #444444 !important;
+    --theme-highlight-orange: #333333 !important;
+    --theme-highlight-lightorange: #222222 !important;
+    --theme-highlight-green: #bbbbbb !important;
+    --theme-highlight-bluegrey: #999999 !important;
+    --theme-highlight-yellow: #dddddd !important;
+}
+
+.devtools-tab.selected .devtools-tab-line,
+.tabs-menu-item.is-active
+    .devtools-tab-line:not(:has(+ [role="tab"]:focus-visible)) {
+    background-color: #454545 !important;
+}
+
+.ruleview-rule-source-label {
+    &:is(a) {
+        color: #454545 !important;
+    }
+}
+
+.ruleview-expandable-header {
+    & button[aria-expanded] {
+        background-color: #222222 !important;
+    }
+}
+
+.ruleview-header {
+    background-color: #222222 !important;
+}
+
+.request-list-item:not(.selected):hover,
+.message-list-item:not(.selected):hover {
+    background-color: #222222 !important;
+}
+
+.accordion-header {
+    background-color: #222222 !important;
+}
+
+.tag-hover {
+    background-color: #222222 !important;
+}
+
+#tabbrowser-tabpanels[zen-split-view="true"]
+    .browserSidebarContainer.deck-selected {
+    outline: 1px solid #222222 !important;
+}
+
+.urlbar[breakout] {
+    & > .urlbar-input-container {
+        background-color: #000;
+        border: none !important;
+    }
+}
+
+.titlebar-buttonbox-container {
+    margin-left: auto;
+    width: fit-content;
+    display: none !important;
+}
+
+#navigator-toolbox:not([zen-sidebar-expanded="true"]) {
+    & #tabbrowser-tabs {
+        & .tabbrowser-tab {
+            & .tab-content {
+                & .tab-icon-image,
+                & .tab-icon-pending {
+                    margin-inline-end: 0 !important;
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+}
+
+#navigator-toolbox:not([zen-sidebar-expanded="true"]) {
+    & .zen-current-workspace-indicator {
+        display: none !important;
+    }
+}
+
+#back-button {
+    display: none !important;
+}
+
+#forward-button {
+    display: none !important;
+}
+
+#urlbar[breakout-extend="true"] {
+    &,
+    & .urlbar-background {
+        border-radius: 14px !important;
+    }
+}
+
+.urlbarView-body-inner {
+    #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+        border-top: none !important;
+    }
+}
+
+#urlbar[breakout-extend="true"] {
+    & .urlbar-background {
+        --zen-urlbar-background-base: #000 !important;
+    }
+}
+
+.urlbar[breakout] {
+    & > .urlbar-input-container {
+        background-color: transparent !important;
+        border: none !important;
+    }
+}
+
+toolbar .toolbarbutton-1 {
+    appearance: none;
+    margin: 0;
+    padding: 0 var(--toolbarbutton-outer-padding);
+    justify-content: center;
+    color: black !important;
+}
+
+menupopup,
+panel {
+    &::part(content) {
+        display: flex;
+        box-sizing: border-box;
+        padding: var(--panel-padding);
+        color: var(--panel-color) !important;
+        background: var(--panel-background) !important;
+        border-radius: var(--panel-border-radius) !important;
+        border: 1px solid var(--panel-border-color) !important;
+        width: var(--panel-width);
+        box-shadow: var(--panel-shadow);
+        margin: var(--panel-shadow-margin);
+        min-width: 0;
+        min-height: 0;
+        max-height: round(up, 100% - 2 * var(--panel-shadow-margin), 1px);
+        max-width: round(up, 100% - 2 * var(--panel-shadow-margin), 1px);
+        overflow: clip;
+    }
+}
+
+menupopup,
+panel {
+    border-radius: 14px !important;
+}
+
+@media not (-moz-bool-pref: "mod.tidypopup.usecustomhovercolor") {
+    menu,
+    menuitem,
+    menucaption {
+        &:not([disabled]):hover {
+            background-color: rgb(46, 46, 46);
+        }
+    }
+}
+
+#zen-appcontent-wrapper {
+    background-color: #000 !important;
+}
+
+#zen-sidebar-splitter {
+    opacity: 1 !important;
+    max-width: var(--zen-toolbox-padding) !important;
+    min-width: var(--zen-toolbox-padding) !important;
+    height: 100%;
+    transition: opacity 0.2s ease-in-out;
+    background: black !important;
+    appearance: none;
+    position: relative !important;
+    order: 0;
+    background: black !important;
+}
+
+.zen-current-workspace-indicator {
+    :root:not([zen-unsynced-window]) & {
+        display: none !important;
+    }
+}
+
+.main-content {
+    background: black !important;
+}
+
+.pinned-tabs-container-separator {
+    & toolbarseparator {
+        height: 1px;
+        background: black !important;
+        padding: 0;
+        margin: auto 4px;
+    }
+}
+
+#urlbar:not([breakout-extend="true"]) {
+    &:hover .urlbar-background {
+        background-color: #000 !important;
+    }
+}
+
+#personal-toolbar-empty-description,
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+    margin: 2px;
+    margin-right: 2px;
+    padding: var(--bookmark-block-padding) 4px;
+    margin-right: 10px !important;
+}
+
+menupopup::part(drop-indicator-container) {
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 5px !important;
+}
+
+toolbarseparator,
+menuseparator {
+    border-width: var(--zen-panel-separator-width);
+    color: black !important;
+}
+
+/*#context-navigation > .menuitem-iconic {
+  display: none !important;
+}*/
